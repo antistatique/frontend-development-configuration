@@ -1,0 +1,9 @@
+{
+  "name": "frontend-development-configuration",
+  "version": "1.0.0",
+  "description": "soon",
+  "main": "index.js",
+  "repository": "https://github.com/antistatique/frontend-development-configuration",
+  "author": "Antistatique",
+  "license": "MIT"
+}
