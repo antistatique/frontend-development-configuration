@@ -21,7 +21,6 @@
     "types": ["cypress"],
   },
   "exclude": ["node_modules"],
-  "files": ["./src/types/twin.d.ts"],
   "include": [
     "./**/*.ts",
     "./**/*.tsx",
