@@ -17,5 +17,4 @@ jobs:
           start: yarn start
           wait-on: http://localhost:3000
           browser: chrome
-          with:
-            working-directory: playground
+          working-directory: playground
