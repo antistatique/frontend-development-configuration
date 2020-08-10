@@ -6,7 +6,7 @@
     "node": true
   },
   "extends": [
-    "airbnb",
+    "airbnb-typescript",
     "plugin:@typescript-eslint/recommended",
     "plugin:import/errors",
     "plugin:import/warnings",
@@ -18,11 +18,11 @@
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaVersion": 2020,
-    "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true
-    }
+    },
+    "ecmaVersion": 2020,
+    "sourceType": "module"
   },
   "plugins": [
     "html",
@@ -36,9 +36,7 @@
       2,
       "as-needed"
     ],
-    "camelcase": 0,
     "comma-dangle": 0,
-    "consistent-return": 0,
     "func-names": 0,
     "import": 0,
     "import/extensions": 0,
@@ -139,7 +137,6 @@
         "avoidEscape": true
       }
     ],
-    "radix": 0,
     "react-hooks/exhaustive-deps": "warn",
     "react-hooks/rules-of-hooks": "error",
     "react/display-name": 1,
@@ -158,8 +155,6 @@
     "react/jsx-props-no-spreading": 0,
     "react/no-array-index-key": 0,
     "react/no-unescaped-entities": 0,
-    "react/prefer-stateless-function": 0,
-    "react/react-in-jsx-scope": 0,
     "react/require-default-props": 0,
     "simple-import-sort/sort": [
       "error",
@@ -196,11 +191,21 @@
     "space-before-function-paren": 0
   },
   "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [
+        ".ts",
+        ".tsx"
+      ]
+    },
     "import/resolver": {
       "node": {
         "paths": [
           "./src"
         ]
+      },
+      "typescript": {
+        "alwaysTryTypes": true,
+        "project": "./"
       }
     },
     "react": {

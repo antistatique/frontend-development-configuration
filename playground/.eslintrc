@@ -1,0 +1,14 @@
+{
+  "extends": "../.eslintrc",
+  "parserOptions": {
+    "project": "./playground/tsconfig.json"
+  },
+  "rules": {
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "packageDir": ["./", "./playground/"]
+      }
+    ]
+  }
+}
