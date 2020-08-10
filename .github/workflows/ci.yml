@@ -1,0 +1,19 @@
+name: Unit and e2e tests
+
+on: [pull_request]
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '14.x'
+      #This step does the yarn install internally, with cache handling.
+      - uses: cypress-io/github-action@v2
+        with:
+          build: cd playground && yarn build
+          start: cd playground && yarn start
+          wait-on: http://localhost:3000
+          browser: chrome
