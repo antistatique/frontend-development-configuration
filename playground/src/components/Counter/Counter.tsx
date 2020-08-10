@@ -15,7 +15,9 @@ const Counter = (): JSX.Element => {
       >
         -
       </button>
-      <span tw="px-4 font-bold text-2xl">{count}</span>
+      <span id="count" tw="px-4 font-bold text-2xl">
+        {count}
+      </span>
       <button
         type="button"
         onClick={() => setCount(i => i + 1)}
