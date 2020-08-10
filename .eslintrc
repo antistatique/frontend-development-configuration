@@ -205,13 +205,13 @@
           "./src"
         ]
       },
+      "react": {
+        "version": "detect"
+      },
       "typescript": {
         "alwaysTryTypes": true,
         "project": "./"
       }
-    },
-    "react": {
-      "version": "detect"
     }
   }
 }

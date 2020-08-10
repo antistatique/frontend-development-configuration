@@ -15,6 +15,7 @@
     "import/resolver": {
       "node": {
         "paths": [
+          "./playground/src",
           "./src"
         ]
       }

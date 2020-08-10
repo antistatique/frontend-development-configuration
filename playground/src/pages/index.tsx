@@ -3,17 +3,11 @@ import React from 'react';
 import { jsx } from '@emotion/core';
 import tw from 'twin.macro';
 
-import type { TypeA } from 'types';
-
-const Example: TypeA = {
-  name: 'next',
-};
+import Blank from 'components/Blank';
 
 const Home = (): JSX.Element => (
   <div>
-    <h1>
-      <p>{Example.name}</p>
-    </h1>
+    <Blank />
   </div>
 );
 
