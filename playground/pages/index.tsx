@@ -1,4 +1,5 @@
 import React from 'react';
+
 import type { TypeA } from '../types';
 
 const Example: TypeA = {

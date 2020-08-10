@@ -7,7 +7,7 @@
   "author": "Antistatique",
   "license": "MIT",
   "scripts": {
-    "lint:js": "eslint --ext '*/**/*.{js,jsx,ts,tsx}' --max-warnings=0"
+    "lint:js": "eslint --ext js,jsx,ts,tsx ./ --max-warnings=0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.11.2",
