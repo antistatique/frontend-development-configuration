@@ -1,31 +1,18 @@
 {
+  "extends": "../tsconfig.json",
+  "files": [
+    "./src/types/twin.d.ts"
+  ],
   "compilerOptions": {
-    "allowJs": true,
-    "alwaysStrict": true,
     "baseUrl": "src",
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "lib": ["dom", "es2017"],
-    "module": "esnext",
-    "moduleResolution": "node",
-    "noEmit": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUnusedLocals": false,
-    "noUnusedParameters": true,
-    "resolveJsonModule": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "target": "esnext",
-    "types": ["cypress"],
+    "types": [],
   },
-  "exclude": ["node_modules"],
-  "files": ["./src/types/twin.d.ts"],
   "include": [
-    "./**/*.ts",
-    "./**/*.tsx",
-    "./**/*.js",
-    "./**/*.jsx"
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
   ]
 }
