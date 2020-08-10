@@ -1,18 +1,23 @@
-name: Unit and e2e tests
+name: Tests suit
 
 on: [pull_request]
 
 jobs:
-  init:
+  E2E:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Setup Node 14.x
+        uses: actions/setup-node@v1
         with:
           node-version: '14.x'
-      - run: yarn install && yarn build
+      - name: Build project
+        run: yarn install && yarn build
+        # Comment the following line if your project is in your root folder
         working-directory: playground
-      - uses: cypress-io/github-action@v2
+      - name: Cypress tests
+        uses: cypress-io/github-action@v2
         with:
           start: yarn start
           wait-on: http://localhost:3000
