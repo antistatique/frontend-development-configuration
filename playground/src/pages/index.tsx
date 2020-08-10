@@ -3,11 +3,11 @@ import React from 'react';
 import { jsx } from '@emotion/core';
 import tw from 'twin.macro';
 
-import Blank from 'components/Blank';
+import Counter from 'components/Counter';
 
 const Home = (): JSX.Element => (
   <div>
-    <Blank />
+    <Counter />
   </div>
 );
 
