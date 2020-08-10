@@ -2,6 +2,7 @@
   "compilerOptions": {
     "allowJs": true,
     "alwaysStrict": true,
+    "baseUrl": "src",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
@@ -19,7 +20,7 @@
     "target": "esnext"
   },
   "exclude": ["node_modules"],
-  "files": ["./types/twin.d.ts"],
+  "files": ["./src/types/twin.d.ts"],
   "include": [
     "./**/*.ts",
     "./**/*.tsx",

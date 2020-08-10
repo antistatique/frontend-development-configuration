@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "tailwind:build": "tailwind build styles/tailwind.css -o styles/base.css -c ./tailwind.config.js",
+    "tailwind:build": "tailwind build src/styles/tailwind.css -o src/styles/base.css -c ./tailwind.config.js",
     "dev": "yarn run tailwind:build && next",
     "build": "yarn run tailwind:build && next build",
     "start": "next start",

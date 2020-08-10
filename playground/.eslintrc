@@ -10,5 +10,14 @@
         "packageDir": ["./", "./playground/"]
       }
     ]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": [
+          "./src"
+        ]
+      }
+    }
   }
 }

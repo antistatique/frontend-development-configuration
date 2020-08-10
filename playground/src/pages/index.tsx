@@ -3,7 +3,7 @@ import React from 'react';
 import { jsx } from '@emotion/core';
 import tw from 'twin.macro';
 
-import type { TypeA } from '../types';
+import type { TypeA } from 'types';
 
 const Example: TypeA = {
   name: 'next',
