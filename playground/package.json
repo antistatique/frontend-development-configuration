@@ -3,20 +3,26 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "next",
-    "build": "next build",
+    "tailwind:build": "tailwind build styles/tailwind.css -o styles/base.css -c ./tailwind.config.js",
+    "dev": "yarn run tailwind:build && next",
+    "build": "yarn run tailwind:build && next build",
     "start": "next start",
     "type-check": "tsc"
   },
   "dependencies": {
+    "@emotion/core": "^10.0.28",
+    "@emotion/styled": "^10.0.27",
     "next": "latest",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "tailwindcss": "^1.6.2",
+    "twin.macro": "^1.7.0"
   },
   "devDependencies": {
     "@types/node": "^12.12.21",
     "@types/react": "^16.9.16",
     "@types/react-dom": "^16.9.4",
+    "babel-plugin-macros": "^2.8.0",
     "typescript": "3.7.3"
   },
   "license": "MIT"

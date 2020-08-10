@@ -1,4 +1,7 @@
+/** @jsx jsx */
 import React from 'react';
+import { jsx } from '@emotion/core';
+import tw from 'twin.macro';
 
 import type { TypeA } from '../types';
 
@@ -7,7 +10,7 @@ const Example: TypeA = {
 };
 
 const Home = (): JSX.Element => (
-  <div style={{ display: 'flex', justifyContent: 'center' }}>
+  <div>
     <h1>
       <p>{Example.name}</p>
     </h1>

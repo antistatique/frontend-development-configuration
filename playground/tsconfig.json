@@ -11,7 +11,7 @@
     "moduleResolution": "node",
     "noEmit": true,
     "noFallthroughCasesInSwitch": true,
-    "noUnusedLocals": true,
+    "noUnusedLocals": false,
     "noUnusedParameters": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
@@ -19,5 +19,11 @@
     "target": "esnext"
   },
   "exclude": ["node_modules"],
-  "include": ["./**/*.ts", "./**/*.tsx", "./**/*.js", "./**/*.jsx"]
+  "files": ["./types/twin.d.ts"],
+  "include": [
+    "./**/*.ts",
+    "./**/*.tsx",
+    "./**/*.js",
+    "./**/*.jsx"
+  ]
 }

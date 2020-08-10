@@ -32,6 +32,12 @@
     "simple-import-sort"
   ],
   "rules": {
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "varsIgnorePattern": "React|tw|css"
+      }
+    ],
     "arrow-body-style": [
       2,
       "as-needed"
@@ -109,12 +115,7 @@
         "allowTaggedTemplates": true
       }
     ],
-    "no-unused-vars": [
-      "error",
-      {
-        "varsIgnorePattern": "React|tw"
-      }
-    ],
+    "no-unused-vars": 0,
     "prefer-const": [
       "error",
       {
