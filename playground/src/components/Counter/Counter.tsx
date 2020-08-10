@@ -7,7 +7,7 @@ const Counter = (): JSX.Element => {
   const [count, setCount] = useState(0);
 
   return (
-    <div tw="flex items-center justify-center w-full h-screen">
+    <div id="counter" tw="flex items-center justify-center w-full h-screen">
       <button
         type="button"
         onClick={() => setCount(i => i - 1)}
@@ -15,9 +15,7 @@ const Counter = (): JSX.Element => {
       >
         -
       </button>
-      <span id="count" tw="px-4 font-bold text-2xl">
-        {count}
-      </span>
+      <span tw="px-4 font-bold text-2xl">{count}</span>
       <button
         type="button"
         onClick={() => setCount(i => i + 1)}
