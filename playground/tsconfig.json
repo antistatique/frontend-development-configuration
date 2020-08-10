@@ -3,7 +3,10 @@
   "files": [
     "./src/types/twin.d.ts"
   ],
-  "compilerOptions": {},
+  "compilerOptions": {
+    "baseUrl": "src",
+    "types": [],
+  },
   "include": [
     "next-env.d.ts",
     "**/*.ts",

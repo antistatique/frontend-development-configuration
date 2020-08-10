@@ -9,7 +9,8 @@
   "scripts": {
     "lint:js": "eslint --ext js,jsx,ts,tsx ./ --max-warnings=0",
     "cypress:open": "cypress open",
-    "cypress:run": "cypress run"
+    "cypress:run": "cypress run",
+    "start": "cd playground && node_modules/.bin/next start"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.11.2",
