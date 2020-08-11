@@ -3,7 +3,7 @@ name: Tests suit
 on: [pull_request]
 
 jobs:
-  E2E:
+  Tests:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
