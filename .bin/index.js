@@ -5,7 +5,8 @@ const inquirer = require('inquirer');
 const path = require('path');
 const { exec } = require("child_process");
 
-const cwd = path.join(path.dirname(__filename), '..');
+const srcd = path.join(path.dirname(__filename), '..');
+const cwd = process.cwd();
 
 const baseDeps = [
   "@types/jest",
@@ -83,35 +84,35 @@ inquirer
 
     if (hasStorybook) {
       deps = [...deps, ...storybookDeps];
-      fs.copySync(`${cwd}/.storybook`, '.storybook');
+      fs.copySync(`${srcd}/.storybook`, `${cwd}/.storybook`);
       fs.removeSync('./.storybook/preview.js');
-      fs.moveSync('./.storybook/preview.template.js', './.storybook/preview.js');
+      fs.moveSync('./.storybook/preview.template.js', `${cwd}/.storybook/preview.js`);
     }
 
     if (hasTests) {
       deps = [...deps, ...testsDeps];
-      fs.copySync(`${cwd}/jest.config.js`, 'jest.config.js');
-      fs.copySync(`${cwd}/cypress.json`, 'cypress.json');
-      fs.copySync(`${cwd}/cypress`, 'cypress');
+      fs.copySync(`${srcd}/jest.config.js`, `${cwd}/jest.config.js`);
+      fs.copySync(`${srcd}/cypress.json`, `${cwd}/cypress.json`);
+      fs.copySync(`${srcd}/cypress`, `${cwd}/cypress`);
     }
 
     if (hasStylelint) {
       deps = [...deps, ...stylelintDeps];
-      fs.copySync(`${cwd}/.stylelintrc`, '.stylelintrc');
+      fs.copySync(`${srcd}/.stylelintrc`, `${cwd}/.stylelintrc`);
     }
 
-    fs.copySync(`${cwd}/.eslintrc`, '.eslintrc');
-    fs.copySync(`${cwd}/.github`, '.github');
-    fs.copySync(`${cwd}/.huskyrc`, '.huskyrc');
-    fs.copySync(`${cwd}/.lintstagedrc`, '.lintstagedrc');
-    fs.copySync(`${cwd}/.vscode`, '.vscode');
-    fs.copySync(`${cwd}/tsconfig.json`, 'tsconfig.json');
+    fs.copySync(`${srcd}/.eslintrc`, `${cwd}/.eslintrc`);
+    fs.copySync(`${srcd}/.github`, `${cwd}/.github`);
+    fs.copySync(`${srcd}/.huskyrc`, `${cwd}/.huskyrc`);
+    fs.copySync(`${srcd}/.lintstagedrc`, `${cwd}/.lintstagedrc`);
+    fs.copySync(`${srcd}/.vscode`, `${cwd}/.vscode`);
+    fs.copySync(`${srcd}/tsconfig.json`, `${cwd}/tsconfig.json`);
 
-    fs.removeSync('./.github/workflows/ci.yml');
-    fs.moveSync('./.github/workflows/ci.template.yml', './.github/workflows/ci.yml');
+    fs.removeSync(`${cwd}/.github/workflows/ci.yml`);
+    fs.moveSync(`${cwd}/.github/workflows/ci.template.yml`, `${cwd}/.github/workflows/ci.yml`);
 
-    const packageJson = fs.readJsonSync('./package.json');
-    fs.writeJsonSync('./package.json', {
+    const packageJson = fs.readJsonSync(`${cwd}/package.json`);
+    fs.writeJsonSync(`${cwd}/package.json`, {
       ...packageJson,
       scripts: {
         ...packageJson.scripts,
