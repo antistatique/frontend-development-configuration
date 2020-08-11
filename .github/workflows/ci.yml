@@ -12,6 +12,9 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '14.x'
+      - name: Build root
+        run: yarn install
+          working-directory: playground
       - name: Build project
         run: yarn install && yarn build
         working-directory: playground
