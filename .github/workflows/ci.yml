@@ -3,7 +3,7 @@ name: Tests suit
 on: [pull_request]
 
 jobs:
-  Tests:
+  Test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
