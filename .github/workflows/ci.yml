@@ -14,10 +14,9 @@ jobs:
           node-version: '14.x'
       - name: Build root
         run: yarn install
-          working-directory: .
       - name: Build project
         run: yarn install && yarn build
-          working-directory: playground
+        working-directory: playground
       - name: Unit tests
         run: yarn jest:run
       - name: Cypress App tests
