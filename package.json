@@ -1,8 +1,11 @@
 {
-  "name": "frontend-development-configuration",
+  "name": "antistatique-frontend",
   "version": "1.0.0",
   "description": "soon",
-  "main": "index.js",
+  "main": ".bin/index.js",
+  "bin": {
+    "antistatique-frontend": ".bin/index.js"
+  },
   "repository": "https://github.com/antistatique/frontend-development-configuration",
   "author": "Antistatique",
   "license": "MIT",
@@ -49,5 +52,8 @@
     "ts-jest": "^26.1.4",
     "typescript": "^3.9.7"
   },
-  "dependencies": {}
+  "dependencies": {
+    "fs-extra": "^9.0.1",
+    "inquirer": "^7.3.3"
+  }
 }
