@@ -5,14 +5,18 @@ import tw from 'twin.macro';
 
 import { add, subtract } from 'utils';
 
-const Counter = (): JSX.Element => {
-  const [count, setCount] = useState(0);
+export interface CounterProps {
+  count: number;
+}
+
+const Counter = ({ count: defaultCount }: CounterProps): JSX.Element => {
+  const [count, setCount] = useState(defaultCount);
 
   return (
     <div id="counter" tw="flex items-center justify-center w-full h-screen">
       <button
         type="button"
-        onClick={() => setCount(i => subtract(i, 1))}
+        onClick={() => setCount(subtract(count, 1))}
         tw="bg-blue-500 text-white rounded py-2 px-4"
       >
         -
@@ -20,7 +24,7 @@ const Counter = (): JSX.Element => {
       <span tw="px-4 font-bold text-2xl">{count}</span>
       <button
         type="button"
-        onClick={() => setCount(i => add(i, 1))}
+        onClick={() => setCount(add(count, 1))}
         tw="bg-blue-500 text-white rounded py-2 px-4"
       >
         +
@@ -29,6 +33,8 @@ const Counter = (): JSX.Element => {
   );
 };
 
-Counter.defaultProps = {};
+Counter.defaultProps = {
+  count: 0,
+};
 
 export default Counter;

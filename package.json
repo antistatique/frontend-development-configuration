@@ -12,13 +12,21 @@
     "cypress:run": "cypress run",
     "jest:start": "jest --watchAll",
     "jest:run": "jest",
-    "start": "cd playground && node_modules/.bin/next start"
+    "start": "cd playground && node_modules/.bin/next start",
+    "storybook:start": "NODE_PATH=playground/src start-storybook -p 6006",
+    "storybook:build": "NODE_PATH=playground/src build-storybook"
   },
   "devDependencies": {
+    "@babel/core": "^7.11.1",
+    "@storybook/addon-actions": "^6.0.0",
+    "@storybook/addon-essentials": "^6.0.0",
+    "@storybook/addon-links": "^6.0.0",
+    "@storybook/react": "^6.0.0",
     "@types/jest": "^26.0.9",
     "@typescript-eslint/eslint-plugin": "^3.8.0",
     "@typescript-eslint/parser": "^3.8.0",
     "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.1.0",
     "cypress": "^4.12.1",
     "eslint": "^7.2.0",
     "eslint-config-airbnb-typescript": "^9.0.0",

@@ -4,7 +4,7 @@
     "./src/types/twin.d.ts"
   ],
   "compilerOptions": {
-    "baseUrl": "src",
+    "baseUrl": "src"
   },
   "include": [
     "next-env.d.ts",
@@ -12,6 +12,9 @@
     "**/*.tsx"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "**/*.spec.*",
+    "**/*.e2e.*",
+    "**/*.stories.*"
   ]
 }

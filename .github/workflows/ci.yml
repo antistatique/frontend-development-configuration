@@ -14,12 +14,21 @@ jobs:
           node-version: '14.x'
       - name: Build project
         run: yarn install && yarn build
-        # Comment the following line if your project is in your root folder
         working-directory: playground
-      - name: Cypress tests
+      - name: Unit tests
+        run: yarn jest:run
+      - name: Cypress App tests
         uses: cypress-io/github-action@v2
         with:
           start: yarn start
           wait-on: http://localhost:3000
           browser: chrome
+          config: baseUrl=http://localhost:3000,integrationFolder=cypress/integration,testFiles=**/*.*
+      - name: Cypress Storybook tests
+        uses: cypress-io/github-action@v2
+        with:
+          start: yarn storybook:start
+          wait-on: http://localhost:6006
+          browser: chrome
+          config: baseUrl=http://localhost:6006,integrationFolder=playground,testFiles=**/*.e2e.*
       

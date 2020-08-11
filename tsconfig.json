@@ -18,13 +18,16 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "esnext",
-    "types": ["jest"],
+    "types": ["jest"]
   },
-  "exclude": ["node_modules"],
   "include": [
-    "./**/*.ts",
-    "./**/*.tsx",
-    "./**/*.js",
-    "./**/*.jsx"
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.spec.*",
+    "**/*.e2e.*",
+    "**/*.stories.*"
   ]
 }
