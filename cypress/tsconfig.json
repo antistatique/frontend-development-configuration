@@ -2,7 +2,7 @@
   "extends": "../tsconfig.json",
   "compilerOptions": {
     "baseUrl": "src",
-    "types": ["cypress"],
+    "types": ["cypress"]
   },
   "include": [
     "../node_modules/cypress",
