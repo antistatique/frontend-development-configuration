@@ -19,8 +19,8 @@ There is the simple rule:
 ## When to test?
 
 There is no magic rule here, but depending of the time and budget of your project, you'll have 2 choices:
-- Short time/budget 👉 Write tests **when you fix bugs** to ensure that they won't happen again
-- Large time/budget 👉 Write tests **at the same time** that your feature's code (TDD) It will save you a lot of time repeating the same action manually.
+- **Short** time/budget 👉 Write tests **when you fix bugs** to ensure that they won't happen again
+- **Large** time/budget 👉 Write tests **at the same time** that your feature's code (TDD) It will save you a lot of time repeating the same action manually.
 
 ## Unit test
 
