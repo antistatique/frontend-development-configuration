@@ -22,7 +22,7 @@ There is no magic rule here, but depending of the time and budget of your projec
 - **Short** time/budget 👉 Write tests **when you fix bugs** to ensure that they won't happen again
 - **Large** time/budget 👉 Write tests **at the same time** that your feature's code (TDD) It will save you a lot of time repeating the same action manually.
 
-## Unit test
+## Unit tests
 
 To create a new unit test: simple create a new file beside the file you want to test with the suffix `.spec`. For example:
 
@@ -34,7 +34,7 @@ To create a new unit test: simple create a new file beside the file you want to 
 
 Then write your test using mainly only the [Jest API](https://jestjs.io/docs/en/expect).
 
-## E2E
+## E2E tests
 
 There are two kinds of E2E tests coming with the “Antistatique Frontend Development Configuration”:
 - **Global E2E** : located in `./cypress/integration`, will test the **final product**, aka your app
