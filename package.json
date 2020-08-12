@@ -1,11 +1,12 @@
 {
   "name": "antistatique-frontend",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "Antistatique opinionated frontend development configuration (linters, tests,...)",
   "main": ".bin/init.js",
   "bin": {
     "antistatique-frontend": ".bin/init.js",
-    "antistatique-next": ".bin/next.js"
+    "init": ".bin/init.js",
+    "next": ".bin/next.js"
   },
   "repository": "https://github.com/antistatique/frontend-development-configuration",
   "author": "Antistatique",

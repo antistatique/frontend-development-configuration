@@ -8,7 +8,8 @@ const srcd = path.join(path.dirname(__filename), '..');
 const cwd = process.cwd();
 
 console.log('Copying file...');
-fs.copySync(`${srcd}/playground/*`, `${cwd}`);
+fs.copySync(`${srcd}/playground`, `${cwd}`);
+fs.removeSync(`${cwd}/tsconfig.json`);
 exec('yarn', () => {
   console.log('✅ Achieved with success!');
 });
