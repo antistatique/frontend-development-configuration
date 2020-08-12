@@ -4,6 +4,14 @@ Testing in **not a common practice** in the frontend world. Here is a **simple s
 
 And remember, **if you want to wee those tests in action,** take a look at the **[playground](https://github.com/antistatique/frontend-development-configuration/tree/master/playground)**.
 
+## Table of content
+
+- [What kinds of tests?](#what-kinds-of-tests)
+- [What to test?](#what-to-test)
+- [When to test?](#when-to-test)
+- [Unit tests](#unit-tests)
+- [E2E tests](#e2e-tests)
+
 ## What kinds of tests?
 
 Here we have two kinds of tests that makes sense to cover almost every part of your project:
