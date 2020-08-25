@@ -69,7 +69,13 @@ const SEO = () => {
 
   useEffect(() => {
     gtm.reset(); // Remove previous previous page data layers
-    gtm.init(); // Trigger page view and set GTM environment
+    gtm.init(); // Re-set GTM environment
+
+    // Custom PageView event for “SPA” stack
+    gtm.event('PageView', {
+      page_path: router.asPath,
+      page_title: metaTitle?.attributes?.content || 'Titre inconnu',
+    });
   }, [asPath]);
 
   return (...);
@@ -114,3 +120,35 @@ const ArticlePage = () => {
   );
 };
 ```
+
+## 5. Configure Page Views on Tag Manager
+
+GTM is still not an happy place for JavaScript applications and we need to add some configuration in order to **track properly page views on Google Analytics**.
+
+### Trigger
+
+**Create a `PageView` trigger** based on the `PageView` event. Nothing more.
+
+![gtm-trigger](./images/gtm-trigger.png)
+
+### Variables
+
+In order to **retrieve the data** of your custom `PageView` event (*from step 3*), you must set **two new variables**:
+
+- `DL_page_path` : *Data Layer Variable* based on `page_path`
+  ![gtm-trigger](./images/gtm-path-var.png)
+
+
+- `DL_page_title` : *Data Layer Variable* based on `page_title`
+  ![gtm-trigger](./images/gtm-title-var.png)
+
+### Tag
+
+Finally, to properly send your page views to Google Analytics, **create a new *Google Analytics Universal Analytics* tag** and re-set `page` and `title` fields with our new variables (see the following screenshots).
+
+![gtm-tag](./images/gtm-tag1.png)
+
+Bind your trigger and you’re done !
+
+![gtm-tag](./images/gtm-tag2.png)
+
