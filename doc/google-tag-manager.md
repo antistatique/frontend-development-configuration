@@ -73,7 +73,7 @@ const SEO = () => {
 
     // Custom PageView event for “SPA” stack
     gtm.event('PageView', {
-      page_path: router.asPath,
+      page_path: asPath,
       page_title: 'My Title',
     });
   }, [asPath]);
