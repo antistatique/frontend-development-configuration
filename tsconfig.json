@@ -18,7 +18,7 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "esnext",
-    "types": ["jest"]
+    "types": ["jest", "cypress"]
   },
   "include": [
     "**/*.ts",

@@ -1,4 +1,4 @@
-import { css as cssProperty } from '@emotion/core';
+import { css as cssProperty } from '@emotion/react';
 import styledComponent from '@emotion/styled';
 
 import 'twin.macro';

@@ -1,13 +1,12 @@
-/** @jsx jsx */
 import React, { useState } from 'react';
-import { jsx } from '@emotion/core';
+import { jsx } from '@emotion/react';
 import tw from 'twin.macro';
 
 import { add, subtract } from 'utils';
 
-export interface CounterProps {
+export type CounterProps = {
   count: number;
-}
+};
 
 const Counter = ({ count: defaultCount }: CounterProps): JSX.Element => {
   const [count, setCount] = useState(defaultCount);
