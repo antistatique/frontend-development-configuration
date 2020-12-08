@@ -1,5 +1,13 @@
 # Changelog
 
+<a name="1.0.6"></a>
+## 1.0.6 (2020-12-08)
+
+### Fixed
+
+- 🐛 fix css in Storybook [[672b620](https://github.com/antistatique/frontend-development-configuration/commit/672b6208069ae623f07af917fb53209103ac7178)]
+
+
 <a name="1.0.5"></a>
 ## 1.0.5 (2020-12-08)
 
