@@ -1,9 +1,9 @@
-import React, { ReactType } from 'react';
+import React, { FunctionComponent } from 'react';
 
 import '../styles/base.css';
 
 interface AppProps {
-  Component: ReactType;
+  Component: FunctionComponent;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   pageProps: any;
 }

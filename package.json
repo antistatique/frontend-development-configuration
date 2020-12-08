@@ -17,7 +17,7 @@
     "cypress:run": "cypress run",
     "jest:start": "jest --watchAll",
     "jest:run": "jest",
-    "start": "cd playground && node_modules/.bin/next start",
+    "start": "cd playground && node_modules/.bin/next dev",
     "storybook:start": "NODE_PATH=playground/src start-storybook -p 6006",
     "storybook:build": "NODE_PATH=playground/src build-storybook"
   },

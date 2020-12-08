@@ -5,5 +5,6 @@ module.exports = {
     format: 'auto',
     hasSuggestions: true,
     debug: false,
+    allowStyleProp: true,
   },
 };
