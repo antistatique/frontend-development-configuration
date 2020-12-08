@@ -1,10 +1,20 @@
 # Changelog
 
-<a name="next"></a>
-## next
+<a name="1.0.5"></a>
+## 1.0.5 (2020-12-08)
+
+### Changed
+
+- ⬆️ update emotion and fix updates side-effect [[de30425](https://github.com/antistatique/frontend-development-configuration/commit/de3042555f0961080f623d060566c617a39dd1bd)]
+- ⬆️ update all dependencies [[dc44e18](https://github.com/antistatique/frontend-development-configuration/commit/dc44e188aa11a56cc823abda8f7c70b16ea62c52)]
 
 ### Miscellaneous
 
+- 📝 improve doc [[517c446](https://github.com/antistatique/frontend-development-configuration/commit/517c446826c8615e348493b3a9f94f125187b8fe)]
+- 📝 improve doc [[f43fd16](https://github.com/antistatique/frontend-development-configuration/commit/f43fd1693e9ba59aaea461910c76d14e14603a4f)]
+- 📝 update GTM doc [[6be1a6a](https://github.com/antistatique/frontend-development-configuration/commit/6be1a6ab52a9e26db53301f6185990c287741b83)]
+- 📝 add GTM doc page [[3277baa](https://github.com/antistatique/frontend-development-configuration/commit/3277baaf24b4cf82e8edf22b2b359d8f40c228c1)]
+- 📝 Improve changelog [[a30c2e8](https://github.com/antistatique/frontend-development-configuration/commit/a30c2e88ebad031efcd17ce343890bd11390acd0)]
 - 📝 add Changelog [[b2dc2eb](https://github.com/antistatique/frontend-development-configuration/commit/b2dc2eb79ecd30d3370c2d3691b0a5d951ba6164)]
 
 
