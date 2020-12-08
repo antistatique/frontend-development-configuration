@@ -1,5 +1,13 @@
 # Changelog
 
+<a name="1.0.7"></a>
+## 1.0.7 (2020-12-08)
+
+### Fixed
+
+- 🐛 fix eslint ts config [[79218ec](https://github.com/antistatique/frontend-development-configuration/commit/79218ecf6cd09762e241d5db985f2e0aec75bf1c)]
+
+
 <a name="1.0.6"></a>
 ## 1.0.6 (2020-12-08)
 
