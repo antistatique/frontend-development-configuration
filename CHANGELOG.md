@@ -1,5 +1,13 @@
 # Changelog
 
+<a name="1.0.9"></a>
+## 1.0.9 (2021-03-05)
+
+### Changed
+
+- 🔧 set proper tsconfig for eslint [[9d56e41](https://github.com/antistatique/frontend-development-configuration/commit/9d56e41bb5e268603276a2bba56e5328fdfe8fcc)]
+
+
 <a name="1.0.8"></a>
 ## 1.0.8 (2021-03-05)
 
