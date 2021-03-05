@@ -126,6 +126,15 @@ inquirer
       }
     });
 
+    const eslintConfig = fs.readJsonSync(`${cwd}/.eslintrc`);
+    fs.writeJsonSync(`${cwd}/.eslintrc`, {
+      ...eslintConfig,
+      parserOptions: {
+        ...eslintConfig.parserOptions,
+        project: './tsconfig.eslint.json',
+      }
+    });
+
     exec(`yarn add --dev ${deps.join(' ')}`, () => {
       console.log('✅ Achieved with success!');
     });
