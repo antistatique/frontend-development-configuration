@@ -90,6 +90,9 @@ inquirer
       fs.copySync(`${srcd}/.storybook`, `${cwd}/.storybook`);
       fs.removeSync('./.storybook/preview.js');
       fs.moveSync('./.storybook/preview.template.js', `${cwd}/.storybook/preview.js`);
+      fs.writeJsonSync(`${cwd}/.storybook/.babelrc`, {
+        "extends": "../.babelrc"
+      });
     }
 
     if (hasTests) {

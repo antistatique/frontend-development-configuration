@@ -60,6 +60,8 @@
   },
   "dependencies": {
     "fs-extra": "^9.1.0",
-    "inquirer": "^8.0.0"
+    "inquirer": "^8.0.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   }
 }
