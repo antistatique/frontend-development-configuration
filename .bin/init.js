@@ -104,10 +104,9 @@ inquirer
       fs.copySync(`${srcd}/.stylelintrc`, `${cwd}/.stylelintrc`);
     }
 
-    fs.copySync(`${srcd}/.husky`, `${cwd}/.husky`);
     fs.copySync(`${srcd}/.eslintrc`, `${cwd}/.eslintrc`);
     fs.copySync(`${srcd}/.github`, `${cwd}/.github`);
-    fs.copySync(`${srcd}/.huskyrc`, `${cwd}/.huskyrc`);
+    fs.copySync(`${srcd}/.husky`, `${cwd}/.husky`);
     fs.copySync(`${srcd}/.lintstagedrc`, `${cwd}/.lintstagedrc`);
     fs.copySync(`${srcd}/.vscode`, `${cwd}/.vscode`);
     fs.copySync(`${srcd}/tsconfig.json`, `${cwd}/tsconfig.json`);
