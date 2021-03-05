@@ -57,8 +57,11 @@ const scripts = {
   "cypress:run": "cypress run",
   "jest:start": "jest --watchAll",
   "jest:run": "jest",
-  "storybook:start": "NODE_PATH=src start-storybook -p 6006",
-  "storybook:build": "NODE_PATH=src build-storybook"
+  "storybook:start": "NODE_PATH=src start-storybook -s public -p 6006",
+  "storybook:build": "NODE_PATH=src build-storybook",
+  "postinstall": "husky install",
+  "prepublishOnly": "pinst --disable",
+  "postpublish": "pinst --enable"
 };
 
 inquirer
@@ -101,6 +104,7 @@ inquirer
       fs.copySync(`${srcd}/.stylelintrc`, `${cwd}/.stylelintrc`);
     }
 
+    fs.copySync(`${srcd}/.husky`, `${cwd}/.husky`);
     fs.copySync(`${srcd}/.eslintrc`, `${cwd}/.eslintrc`);
     fs.copySync(`${srcd}/.github`, `${cwd}/.github`);
     fs.copySync(`${srcd}/.huskyrc`, `${cwd}/.huskyrc`);

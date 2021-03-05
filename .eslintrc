@@ -12,9 +12,7 @@
     "plugin:import/warnings",
     "plugin:prettier/recommended",
     "plugin:react/recommended",
-    "prettier",
-    "prettier/@typescript-eslint",
-    "prettier/react"
+    "prettier"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
