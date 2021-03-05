@@ -1,5 +1,16 @@
 # Changelog
 
+<a name="1.0.8"></a>
+## 1.0.8 (2021-03-05)
+
+### Changed
+
+- ⬆️ upgrade playground [[5b35d93](https://github.com/antistatique/frontend-development-configuration/commit/5b35d938db2c268cedb5e36ef5da4905e90ac7ed)]
+- 🔧 update init bin [[999afbd](https://github.com/antistatique/frontend-development-configuration/commit/999afbd9f08c3440afb0c439f6d1a82fb2d3809a)]
+- ⬆️ ugrade dependencies and scripts [[c2de6d2](https://github.com/antistatique/frontend-development-configuration/commit/c2de6d275d8ec0e54365d010c96d9163221c9de4)]
+- ♻️ only TS [[7ec68c2](https://github.com/antistatique/frontend-development-configuration/commit/7ec68c2dffd80b654805238dcafa40ce2ce5e281)]
+
+
 <a name="1.0.7"></a>
 ## 1.0.7 (2020-12-08)
 
