@@ -12,6 +12,7 @@
     "plugin:import/warnings",
     "plugin:prettier/recommended",
     "plugin:react/recommended",
+    "plugin:tailwind/recommended",
     "prettier"
   ],
   "parser": "@typescript-eslint/parser",
