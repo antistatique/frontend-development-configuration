@@ -1,15 +1,12 @@
-import React, { FunctionComponent } from 'react';
-
-import '../styles/base.css';
-
-interface AppProps {
-  Component: FunctionComponent;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  pageProps: any;
-}
+import React from 'react';
+import type { AppProps } from 'next/app';
+import { GlobalStyles } from 'twin.macro';
 
 const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => (
-  <Component {...pageProps} />
+  <>
+    <GlobalStyles />
+    <Component {...pageProps} />
+  </>
 );
 
 export default MyApp;
