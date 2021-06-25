@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { jsx } from '@emotion/react';
 import tw from 'twin.macro';
 
+import Icon from 'components/Icon';
 import { add, subtract } from 'utils';
 
 export type CounterProps = {
@@ -20,7 +21,10 @@ const Counter = ({ count: defaultCount }: CounterProps): JSX.Element => {
       >
         -
       </button>
-      <span tw="px-4 font-bold text-2xl">{count}</span>
+      <span tw="px-4 font-bold text-2xl">
+        <Icon />
+        {count}
+      </span>
       <button
         type="button"
         onClick={() => setCount(add(count, 1))}
