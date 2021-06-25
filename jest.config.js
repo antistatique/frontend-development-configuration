@@ -1,5 +1,5 @@
 module.exports = {
-  moduleDirectories: ['./node_modules'],
+  moduleDirectories: ['./node_modules', 'src'],
   preset: 'ts-jest',
   testEnvironment: 'node',
   testMatch: [
@@ -8,5 +8,13 @@ module.exports = {
   ],
   transform: {
     '^.+\\.(ts|tsx)$': 'ts-jest',
+  },
+  setupFiles: [
+    'dotenv/config'
+  ],
+  globals: {
+    'ts-jest': {
+      tsconfig: './tsconfig.test.json',
+    },
   },
 };

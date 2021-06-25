@@ -116,6 +116,8 @@ inquirer
     fs.copySync(`${srcd}/.lintstagedrc`, `${cwd}/.lintstagedrc`);
     fs.copySync(`${srcd}/.vscode`, `${cwd}/.vscode`);
     fs.copySync(`${srcd}/tsconfig.json`, `${cwd}/tsconfig.json`);
+    fs.copySync(`${srcd}/tsconfig.test.json`, `${cwd}/tsconfig.test.json`);
+    fs.copySync(`${srcd}/playground/tsconfig.eslint.json`, `${cwd}/tsconfig.eslint.json`);
 
     fs.removeSync(`${cwd}/.github/workflows/ci.yml`);
     fs.moveSync(`${cwd}/.github/workflows/ci.template.yml`, `${cwd}/.github/workflows/ci.yml`);
