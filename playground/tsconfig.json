@@ -1,8 +1,5 @@
 {
   "extends": "../tsconfig.json",
-  "files": [
-    "./src/types/twin.d.ts"
-  ],
   "compilerOptions": {
     "baseUrl": "src"
   },

@@ -9,6 +9,7 @@ const srcd = path.join(path.dirname(__filename), '..');
 const cwd = process.cwd();
 
 const baseDeps = [
+  "@svgr/webpack",
   "@types/jest",
   "@typescript-eslint/eslint-plugin",
   "@typescript-eslint/parser",
@@ -24,8 +25,10 @@ const baseDeps = [
   "eslint-plugin-react",
   "eslint-plugin-react-hooks",
   "eslint-plugin-simple-import-sort",
+  "eslint-plugin-tailwind",
   "husky",
   "lint-staged",
+  "patch-package",
   "prettier",
   "typescript",
 ];
@@ -59,7 +62,7 @@ const scripts = {
   "jest:run": "jest",
   "storybook:start": "NODE_PATH=src start-storybook -s public -p 6006",
   "storybook:build": "NODE_PATH=src build-storybook",
-  "postinstall": "husky install",
+  "postinstall": "husky install && patch-package",
   "prepublishOnly": "pinst --disable",
   "postpublish": "pinst --enable"
 };
@@ -88,6 +91,8 @@ inquirer
     if (hasStorybook) {
       deps = [...deps, ...storybookDeps];
       fs.copySync(`${srcd}/.storybook`, `${cwd}/.storybook`);
+      fs.removeSync('./.storybook/main.js');
+      fs.moveSync('./.storybook/main.template.js', `${cwd}/.storybook/main.js`);
       fs.removeSync('./.storybook/preview.js');
       fs.moveSync('./.storybook/preview.template.js', `${cwd}/.storybook/preview.js`);
       fs.writeJsonSync(`${cwd}/.storybook/.babelrc`, {
@@ -110,9 +115,12 @@ inquirer
     fs.copySync(`${srcd}/.eslintrc`, `${cwd}/.eslintrc`);
     fs.copySync(`${srcd}/.github`, `${cwd}/.github`);
     fs.copySync(`${srcd}/.husky`, `${cwd}/.husky`);
+    fs.copySync(`${srcd}/.patches`, `${cwd}/.patches`);
     fs.copySync(`${srcd}/.lintstagedrc`, `${cwd}/.lintstagedrc`);
     fs.copySync(`${srcd}/.vscode`, `${cwd}/.vscode`);
     fs.copySync(`${srcd}/tsconfig.json`, `${cwd}/tsconfig.json`);
+    fs.copySync(`${srcd}/tsconfig.test.json`, `${cwd}/tsconfig.test.json`);
+    fs.copySync(`${srcd}/playground/tsconfig.eslint.json`, `${cwd}/tsconfig.eslint.json`);
 
     fs.removeSync(`${cwd}/.github/workflows/ci.yml`);
     fs.moveSync(`${cwd}/.github/workflows/ci.template.yml`, `${cwd}/.github/workflows/ci.yml`);

@@ -6,8 +6,11 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
-    "jsx": "preserve",
-    "lib": ["dom", "es2017"],
+    "jsx": "react",
+    "lib": [
+      "dom",
+      "es2017"
+    ],
     "module": "esnext",
     "moduleResolution": "node",
     "noEmit": true,
@@ -18,7 +21,10 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "esnext",
-    "types": ["jest", "cypress", "@emotion/react/types/css-prop"]
+    "types": [
+      "jest",
+      "cypress"
+    ]
   },
   "include": [
     "**/*.ts",
@@ -26,7 +32,6 @@
   ],
   "exclude": [
     "node_modules",
-    "**/*.spec.*",
     "**/*.e2e.*",
     "**/*.stories.*"
   ]

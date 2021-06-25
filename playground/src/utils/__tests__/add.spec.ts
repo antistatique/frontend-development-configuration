@@ -1,4 +1,4 @@
-import add from './add';
+import add from '../add';
 
 describe('Utils testing : Add', () => {
   it('should produce the right result', () => {

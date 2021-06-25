@@ -1,5 +1,27 @@
 # Changelog
 
+<a name="1.1.0"></a>
+## 1.1.0 (2021-06-25)
+
+### Added
+
+- ✨ add Icons system [[7b6555f](https://github.com/antistatique/frontend-development-configuration/commit/7b6555fcbcbceb3405a9cbe0eb9980ccf95503b4)]
+- ✨ add eslint-plugin-tailwind and the twin related patch [[2240b79](https://github.com/antistatique/frontend-development-configuration/commit/2240b79d16dae7ff98df1697f411a18845b31da0)]
+
+### Changed
+
+- 🔧 add missing devDeps on init [[91686bd](https://github.com/antistatique/frontend-development-configuration/commit/91686bdb8b30c242222a61dc1073fc334c90ea75)]
+- 🔧 fix storybook and test config [[90b913e](https://github.com/antistatique/frontend-development-configuration/commit/90b913ec40ad2938bf301128f78bb9f7be84169b)]
+- ⬆️ update twin.macro integration [[5c182e2](https://github.com/antistatique/frontend-development-configuration/commit/5c182e27fa9e4755e5c225ff105d005fb077dcb9)]
+- ⬆️ rough update of dependencies and configs [[1797bc5](https://github.com/antistatique/frontend-development-configuration/commit/1797bc501d83cec91305b696743eeb76f2471b72)]
+- 🔧 update config [[41efc28](https://github.com/antistatique/frontend-development-configuration/commit/41efc288cf08ffdb2212c92e8db0cf927980bdd6)]
+- ⬆️ upgrade playground dependencies [[cc82dca](https://github.com/antistatique/frontend-development-configuration/commit/cc82dca353f224e55a00edec55fd4a8e79cc849f)]
+
+### Miscellaneous
+
+- 📝 update test doc [[e087bd7](https://github.com/antistatique/frontend-development-configuration/commit/e087bd7f26743a7242b49868bfd4d85403911ad4)]
+
+
 <a name="1.0.9"></a>
 ## 1.0.9 (2021-03-05)
 
