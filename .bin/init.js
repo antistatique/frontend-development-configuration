@@ -9,6 +9,7 @@ const srcd = path.join(path.dirname(__filename), '..');
 const cwd = process.cwd();
 
 const baseDeps = [
+  "@svgr/webpack",
   "@types/jest",
   "@typescript-eslint/eslint-plugin",
   "@typescript-eslint/parser",
