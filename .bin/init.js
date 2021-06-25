@@ -90,6 +90,8 @@ inquirer
     if (hasStorybook) {
       deps = [...deps, ...storybookDeps];
       fs.copySync(`${srcd}/.storybook`, `${cwd}/.storybook`);
+      fs.removeSync('./.storybook/main.js');
+      fs.moveSync('./.storybook/main.template.js', `${cwd}/.storybook/main.js`);
       fs.removeSync('./.storybook/preview.js');
       fs.moveSync('./.storybook/preview.template.js', `${cwd}/.storybook/preview.js`);
       fs.writeJsonSync(`${cwd}/.storybook/.babelrc`, {

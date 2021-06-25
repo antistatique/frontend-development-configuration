@@ -1,4 +1,4 @@
-import subtract from './subtract';
+import subtract from '../subtract';
 
 describe('Utils testing : Subtract', () => {
   it('should produce the right result', () => {
