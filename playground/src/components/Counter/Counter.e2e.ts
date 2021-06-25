@@ -1,7 +1,7 @@
 /* globals cy */
 
 describe('Counter', () => {
-  beforeEach(() => cy.visitStorybook('counter--default'));
+  beforeEach(() => cy.visitStorybook('components-counter--default'));
 
   it('should display the count', () => {
     cy.get('#counter > span').should('have.length', 1);
