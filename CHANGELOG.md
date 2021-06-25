@@ -1,5 +1,13 @@
 # Changelog
 
+<a name="1.1.1"></a>
+## 1.1.1 (2021-06-25)
+
+### Fixed
+
+- 🐛 fix wrong path [[edc52bf](https://github.com/antistatique/frontend-development-configuration/commit/edc52bfa4da0dfac18154ccbbbf70a8caec4c281)]
+
+
 <a name="1.1.0"></a>
 ## 1.1.0 (2021-06-25)
 
