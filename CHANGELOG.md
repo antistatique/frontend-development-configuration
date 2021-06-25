@@ -1,5 +1,13 @@
 # Changelog
 
+<a name="1.1.2"></a>
+## 1.1.2 (2021-06-25)
+
+### Miscellaneous
+
+- 📝 improve doc [[f66fd64](https://github.com/antistatique/frontend-development-configuration/commit/f66fd6480dc7fb7dcb62bc74cfcf4e2265f814c8)]
+
+
 <a name="1.1.1"></a>
 ## 1.1.1 (2021-06-25)
 
