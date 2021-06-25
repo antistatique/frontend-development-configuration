@@ -1,5 +1,13 @@
 # Changelog
 
+<a name="1.1.3"></a>
+## 1.1.3 (2021-06-25)
+
+### Added
+
+- ✅ fix counter e2e test [[0d7eca5](https://github.com/antistatique/frontend-development-configuration/commit/0d7eca53a91e58f53115ec1c900b26ab1ac57f2b)]
+
+
 <a name="1.1.2"></a>
 ## 1.1.2 (2021-06-25)
 
