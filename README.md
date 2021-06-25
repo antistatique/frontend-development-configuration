@@ -2,7 +2,7 @@
 
 > Antistatique truth source and **opinionated** configuration.
 
-*If you're just to lazy to read the README  😏👉 `npx antistatique-frontend`*
+*If you're just to lazy to read the README  😏👉 `npx antistatique-frontend@latest`*
 
 **Others resources**
 - [📗 Tests Handbook](doc/tests-handbook.md)
@@ -41,7 +41,7 @@ Currently **provides**:
 First, **create your project** using the dedicated scaffolding tool for your project's technologies. Here are some usefull commands that you can use :
 
 ```bash
-$ npx -p antistatique-frontend next # Cool, right?
+$ npx -p antistatique-frontend@latest next # Cool, right?
 $ npx create-react-app my-app --template typescript
 $ npx create-next-app --example with-typescript-types my-app
 ```
@@ -49,7 +49,7 @@ $ npx create-next-app --example with-typescript-types my-app
 Then, to **get this amazing environment**, simply execute the following command and answer the questions:
 
 ```bash
-$ npx antistatique-frontend
+$ npx antistatique-frontend@latest
 ```
 
 ## What's inside?

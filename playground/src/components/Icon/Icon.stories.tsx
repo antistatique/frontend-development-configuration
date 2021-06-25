@@ -21,5 +21,5 @@ const Template: Story<Props> = args => <Icon {...args} />;
 export const Default = Template.bind({});
 
 Default.args = {
-  name: 'edit',
+  name: 'home',
 };
