@@ -32,12 +32,13 @@ There is no magic rule here, but depending of the time and budget of your projec
 
 ## Unit tests
 
-To create a new unit test: simple create a new file beside the file you want to test with the suffix `.spec`. For example:
+To create a new unit test: simple create a new file in a `__tests__` sub directory with the suffix `.spec`. For example:
 
 ```plain
 .
 ├── my-script.ts
-└── my-script.spec.ts
+└── __tests__
+    └── my-script.spec.ts
 ```
 
 Then write your test using mainly only the [Jest API](https://jestjs.io/docs/en/expect).
