@@ -1,5 +1,13 @@
 # Changelog
 
+<a name="1.1.4"></a>
+## 1.1.4 (2021-09-17)
+
+### Changed
+
+- ⬆️ upgrade dependencies [[ca16f7e](https://github.com/antistatique/frontend-development-configuration/commit/ca16f7e4644c3909fa30531f110be2ac08ac1965)]
+
+
 <a name="1.1.3"></a>
 ## 1.1.3 (2021-06-25)
 
