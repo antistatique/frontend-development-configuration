@@ -15,6 +15,7 @@ const baseDeps = [
   "@typescript-eslint/parser",
   "babel-eslint",
   "eslint",
+  "eslint-config-airbnb",
   "eslint-config-airbnb-typescript",
   "eslint-config-prettier",
   "eslint-import-resolver-typescript",
