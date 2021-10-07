@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.6] - 2021-10-07
+### Added
+- add missing airbnb base eslint config
+
 ## [1.1.5] - 2021-09-17
 ### Changed
 - Migration Changelog to keepachangelog spec
@@ -108,7 +112,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - ✏️ fix typo \[[7cc2b1a](https://github.com/antistatique/frontend-development-configuration/commit/7cc2b1a6bf8a9db1f0d1f1be53cb5e946dd47027)]
 - 💚 improve Github Actions naming \[[77df124](https://github.com/antistatique/frontend-development-configuration/commit/77df12461e75110951f577c2177e49bd1e1c30bd)]
 
-[Unreleased]: https://github.com/antistatique/frontend-development-configuration/compare/v1.1.5...HEAD
+[Unreleased]: https://github.com/antistatique/frontend-development-configuration/compare/1.1.6...HEAD
+[1.1.6]: https://github.com/antistatique/frontend-development-configuration/compare/1.1.5...1.1.6
 [1.1.5]: https://github.com/antistatique/frontend-development-configuration/compare/v1.1.4...v1.1.5
 [1.1.4]: https://github.com/antistatique/frontend-development-configuration/releases/tag/1.1.4
 [1.1.3]: https://github.com/antistatique/frontend-development-configuration/releases/tag/1.1.3
