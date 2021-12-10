@@ -1,8 +1,6 @@
 import React from 'react';
-import { jsx } from '@emotion/react';
-import tw from 'twin.macro';
 
-import styles from './Blank.styles';
+import styles from './Blank.module.css';
 
 type Props = {
   name: string;
@@ -12,7 +10,7 @@ const Blank = ({ name }: Props): JSX.Element => {
   const greeting = 'Hello';
 
   return (
-    <div css={styles}>
+    <div className={styles.blank}>
       {greeting} {name}
     </div>
   );

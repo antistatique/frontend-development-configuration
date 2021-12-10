@@ -1,6 +1,4 @@
 import React, { FunctionComponent } from 'react';
-import { jsx } from '@emotion/react';
-import tw, { GlobalStyles } from 'twin.macro';
 
 import Icons from 'components/Icons';
 
@@ -19,12 +17,9 @@ Layout.defaultProps = {};
 
 // For Storybook
 export const LayoutDecorator = (Story: FunctionComponent): JSX.Element => (
-  <>
-    <GlobalStyles />
-    <div tw="font-sans antialiased text-gray-900">
-      <Story />
-    </div>
-  </>
+  <div className="font-sans antialiased text-gray-900">
+    <Story />
+  </div>
 );
 
 export default Layout;

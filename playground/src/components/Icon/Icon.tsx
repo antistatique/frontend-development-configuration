@@ -1,10 +1,8 @@
 import React from 'react';
-import { jsx } from '@emotion/react';
-import tw from 'twin.macro';
 
 import { IconNames } from 'components/Icons/Icons';
 
-import styles from './Icon.styles';
+import styles from './Icon.module.css';
 
 export type Props = {
   name?: IconNames;
@@ -12,7 +10,7 @@ export type Props = {
 };
 
 const Icon = ({ name = 'home', className }: Props): JSX.Element => (
-  <svg css={styles} className={className} aria-hidden="true">
+  <svg className={`${styles.icon} ${className}`} aria-hidden="true">
     <use xlinkHref={`#${name}`} />
   </svg>
 );
