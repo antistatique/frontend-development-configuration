@@ -17,18 +17,18 @@ const Counter = ({ count: defaultCount }: CounterProps): JSX.Element => {
       <button
         type="button"
         onClick={() => setCount(subtract(count, 1))}
-        tw="bg-blue-500 text-white rounded py-2 px-4"
+        tw="px-4 py-2 text-white bg-blue-500 rounded"
       >
         -
       </button>
-      <span tw="px-4 font-bold text-2xl">
+      <span tw="px-4 text-2xl font-bold">
         <Icon />
         {count}
       </span>
       <button
         type="button"
         onClick={() => setCount(add(count, 1))}
-        tw="bg-blue-500 text-white rounded py-2 px-4"
+        tw="px-4 py-2 text-white bg-blue-500 rounded"
       >
         +
       </button>
