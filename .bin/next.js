@@ -10,6 +10,7 @@ const cwd = process.cwd();
 console.log('Copying file...');
 fs.copySync(`${srcd}/playground`, `${cwd}`);
 fs.removeSync(`${cwd}/tsconfig.json`);
+fs.copySync(`${srcd}/tsconfig.json`, `${cwd}/tsconfig.json`);
 fs.removeSync(`${cwd}/.storybook`);
 exec('yarn', () => {
   console.log('✅ Achieved with success!');

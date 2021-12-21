@@ -83,7 +83,7 @@ inquirer
       choices: [
         { name: 'Storybook', value: 'storybook', checked: true },
         { name: 'Tests (Cypress + Jest)', value: 'tests', checked: true },
-        { name: 'Stylelint', value: 'stylelint', checked: false },
+        { name: 'Stylelint', value: 'stylelint', checked: true },
       ]
     }
   ])
