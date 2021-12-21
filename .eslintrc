@@ -36,7 +36,7 @@
     "@typescript-eslint/no-unused-vars": [
       "error",
       {
-        "varsIgnorePattern": "React|tw|css|jsx"
+        "varsIgnorePattern": "React"
       }
     ],
     "arrow-body-style": [
@@ -85,6 +85,7 @@
         "props": false
       }
     ],
+    "no-restricted-exports": 0,
     "no-restricted-syntax": [
       2,
       "ForInStatement",
@@ -140,6 +141,7 @@
       }
     ],
     "react-hooks/exhaustive-deps": "warn",
+    "react/function-component-definition": [2, { "namedComponents": "arrow-function" }],
     "react-hooks/rules-of-hooks": "error",
     "react/display-name": 1,
     "react/forbid-prop-types": 0,

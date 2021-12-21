@@ -1,17 +1,14 @@
 import React from 'react';
-import { Meta, Story } from '@storybook/react';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 
-import Counter, { CounterProps } from './Counter';
+import Counter from './Counter';
 
 export default {
   title: 'Components/Counter',
   component: Counter,
-  argTypes: {
-    count: { control: 'number' },
-  },
-} as Meta;
+} as ComponentMeta<typeof Counter>;
 
-const Template: Story<CounterProps> = args => <Counter {...args} />;
+const Template: ComponentStory<typeof Counter> = args => <Counter {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

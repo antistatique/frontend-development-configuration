@@ -29,7 +29,7 @@ const baseDeps = [
   "eslint-plugin-tailwind",
   "husky",
   "lint-staged",
-  "patch-package",
+  "pinst",
   "prettier",
   "typescript",
 ];
@@ -37,14 +37,20 @@ const baseDeps = [
 const storybookDeps = [
   "@babel/core",
   "@storybook/addon-actions",
+  "@storybook/addon-docs",
   "@storybook/addon-essentials",
   "@storybook/addon-links",
+  "@storybook/addon-postcss",
+  "@storybook/builder-webpack5",
+  "@storybook/manager-webpack5",
   "@storybook/react",
-  "babel-loader",
+  "storybook-addon-next-router",
+  "storybook-css-modules-preset",
 ];
 
 const testsDeps = [
   "cypress",
+  "dotenv",
   "jest",
   "ts-jest",
 ];
@@ -63,7 +69,7 @@ const scripts = {
   "jest:run": "jest",
   "storybook:start": "NODE_PATH=src start-storybook -s public -p 6006",
   "storybook:build": "NODE_PATH=src build-storybook",
-  "postinstall": "husky install && patch-package",
+  "postinstall": "husky install",
   "prepublishOnly": "pinst --disable",
   "postpublish": "pinst --enable"
 };
@@ -91,14 +97,7 @@ inquirer
 
     if (hasStorybook) {
       deps = [...deps, ...storybookDeps];
-      fs.copySync(`${srcd}/.storybook`, `${cwd}/.storybook`);
-      fs.removeSync('./.storybook/main.js');
-      fs.moveSync('./.storybook/main.template.js', `${cwd}/.storybook/main.js`);
-      fs.removeSync('./.storybook/preview.js');
-      fs.moveSync('./.storybook/preview.template.js', `${cwd}/.storybook/preview.js`);
-      fs.writeJsonSync(`${cwd}/.storybook/.babelrc`, {
-        "extends": "../.babelrc"
-      });
+      fs.copySync(`${srcd}/playground/.storybook`, `${cwd}/.storybook`);
     }
 
     if (hasTests) {
@@ -116,7 +115,6 @@ inquirer
     fs.copySync(`${srcd}/.eslintrc`, `${cwd}/.eslintrc`);
     fs.copySync(`${srcd}/.github`, `${cwd}/.github`);
     fs.copySync(`${srcd}/.husky`, `${cwd}/.husky`);
-    fs.copySync(`${srcd}/patches`, `${cwd}/patches`);
     fs.copySync(`${srcd}/.lintstagedrc`, `${cwd}/.lintstagedrc`);
     fs.copySync(`${srcd}/.vscode`, `${cwd}/.vscode`);
     fs.copySync(`${srcd}/tsconfig.json`, `${cwd}/tsconfig.json`);
