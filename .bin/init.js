@@ -29,6 +29,7 @@ const baseDeps = [
   "eslint-plugin-tailwind",
   "husky",
   "lint-staged",
+  "pinst",
   "prettier",
   "typescript",
 ];
@@ -36,14 +37,20 @@ const baseDeps = [
 const storybookDeps = [
   "@babel/core",
   "@storybook/addon-actions",
+  "@storybook/addon-docs",
   "@storybook/addon-essentials",
   "@storybook/addon-links",
+  "@storybook/addon-postcss",
+  "@storybook/builder-webpack5",
+  "@storybook/manager-webpack5",
   "@storybook/react",
-  "babel-loader",
+  "storybook-addon-next-router",
+  "storybook-css-modules-preset",
 ];
 
 const testsDeps = [
   "cypress",
+  "dotenv",
   "jest",
   "ts-jest",
 ];
@@ -90,14 +97,7 @@ inquirer
 
     if (hasStorybook) {
       deps = [...deps, ...storybookDeps];
-      fs.copySync(`${srcd}/.storybook`, `${cwd}/.storybook`);
-      fs.removeSync('./.storybook/main.js');
-      fs.moveSync('./.storybook/main.template.js', `${cwd}/.storybook/main.js`);
-      fs.removeSync('./.storybook/preview.js');
-      fs.moveSync('./.storybook/preview.template.js', `${cwd}/.storybook/preview.js`);
-      fs.writeJsonSync(`${cwd}/.storybook/.babelrc`, {
-        "extends": "../.babelrc"
-      });
+      fs.copySync(`${srcd}/playground/.storybook`, `${cwd}/.storybook`);
     }
 
     if (hasTests) {
