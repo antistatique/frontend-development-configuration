@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [1.2.1] - 2021-12-21
 ### Added
 - Tailwind 3 support without Emotion
 
@@ -114,7 +116,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - ✏️ fix typo \[[7cc2b1a](https://github.com/antistatique/frontend-development-configuration/commit/7cc2b1a6bf8a9db1f0d1f1be53cb5e946dd47027)]
 - 💚 improve Github Actions naming \[[77df124](https://github.com/antistatique/frontend-development-configuration/commit/77df12461e75110951f577c2177e49bd1e1c30bd)]
 
-[Unreleased]: https://github.com/antistatique/frontend-development-configuration/compare/1.1.6...HEAD
+[Unreleased]: https://github.com/antistatique/frontend-development-configuration/compare/1.2.1...HEAD
+[1.2.1]: https://github.com/antistatique/frontend-development-configuration/compare/1.1.6...1.2.1
 [1.1.6]: https://github.com/antistatique/frontend-development-configuration/compare/1.1.5...1.1.6
 [1.1.5]: https://github.com/antistatique/frontend-development-configuration/compare/v1.1.4...v1.1.5
 [1.1.4]: https://github.com/antistatique/frontend-development-configuration/releases/tag/1.1.4
