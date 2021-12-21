@@ -21,25 +21,20 @@
     "jest:start": "jest --watchAll",
     "jest:run": "jest",
     "start": "cd playground && node_modules/.bin/next dev",
-    "storybook:start": "NODE_PATH=playground/src start-storybook -p 6006",
-    "storybook:build": "NODE_PATH=playground/src build-storybook",
+    "build": "cd playground && node_modules/.bin/next build",
+    "storybook:start": "cd playground && node_modules/.bin/start-storybook -p 6006",
+    "storybook:build": "cd playground && node_modules/.bin/build-storybook",
     "postinstall": "husky install",
     "prepublishOnly": "pinst --disable",
     "postpublish": "pinst --enable"
   },
   "devDependencies": {
-    "@babel/core": "^7.16.0",
-    "@storybook/addon-actions": "^6.4.9",
-    "@storybook/addon-essentials": "^6.4.9",
-    "@storybook/addon-links": "^6.4.9",
-    "@storybook/react": "^6.4.9",
-    "@svgr/webpack": "^6.1.1",
     "@types/jest": "^27.0.3",
     "@typescript-eslint/eslint-plugin": "^5.6.0",
     "@typescript-eslint/parser": "^5.6.0",
     "babel-eslint": "^10.1.0",
-    "babel-loader": "^8.2.3",
     "cypress": "^9.1.1",
+    "dotenv": "^10.0.0",
     "eslint": "^8.4.1",
     "eslint-config-airbnb": "^19.0.2",
     "eslint-config-airbnb-typescript": "^16.1.0",
@@ -66,8 +61,6 @@
   },
   "dependencies": {
     "fs-extra": "^10.0.0",
-    "inquirer": "^8.2.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "inquirer": "^8.2.0"
   }
 }

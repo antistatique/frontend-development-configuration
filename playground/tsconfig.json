@@ -1,8 +1,7 @@
 {
   "extends": "../tsconfig.json",
   "compilerOptions": {
-    "baseUrl": "src",
-    "incremental": true
+    "baseUrl": "./src/"
   },
   "include": [
     "next-env.d.ts",

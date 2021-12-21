@@ -18,7 +18,8 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "esnext",
-    "types": ["jest", "cypress", "@emotion/react/types/css-prop"]
+    "types": ["jest", "cypress"],
+    "incremental": true
   },
   "include": [
     "**/*.ts",
