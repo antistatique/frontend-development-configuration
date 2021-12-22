@@ -1,4 +1,5 @@
 import React from 'react';
+import clsx from 'clsx';
 
 import { IconNames } from 'components/Icons/Icons';
 
@@ -10,7 +11,7 @@ export type Props = {
 };
 
 const Icon = ({ name = 'home', className }: Props): JSX.Element => (
-  <svg className={`${styles.icon} ${className}`} aria-hidden="true">
+  <svg className={clsx(styles.icon, className)} aria-hidden="true">
     <use xlinkHref={`#${name}`} />
   </svg>
 );

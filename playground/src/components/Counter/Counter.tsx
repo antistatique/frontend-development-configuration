@@ -23,7 +23,7 @@ const Counter = ({ count: defaultCount }: CounterProps): JSX.Element => {
         -
       </button>
       <span className="px-4 text-2xl font-bold">
-        <Icon />
+        <Icon className="text-xl" />
         {count}
       </span>
       <button

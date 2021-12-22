@@ -42,7 +42,7 @@
   import tw from 'twin.macro';
   ```
 2. Replace all `tw=` by `className=`.
-3. Refactor `css=` properties logic with `className` logic
+3. Refactor `css=` properties logic with `clsx` logic. For example `css={[tw'text-lg', isBig && tw'p-12']}` → `className={clsx('text-lg', isBig && 'p-12')}`
 
 ## With your MyComponent.styles.tsx
 
