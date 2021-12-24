@@ -59,13 +59,15 @@ $ npx antistatique-frontend@latest
 ├── .eslintrc           👉 ESLint configuration
 ├── .github
 │   └── workflows       👉 Github Actions Workflow for Tests
-├── .huskyrc            👉 Husky (pre-commit) configuration
+├── .husky              👉 Husky (pre-commit) configuration
 ├── .lintstagedrc       👉 lint-staged (for pre-commits) configuration
+├── .prettierrc         👉 Prettier configuration (mainly for HTML/TWIG)
 ├── .storybook 
 │   ├── main.js         👉 Storybook configuration
 │   └── preview.js      👉 Where you load you global CSS
 ├── .stylelintrc        👉 Stylelint configuration
 ├── .vscode
+│   ├── extensions.json 👉 Recommended plugins to install
 │   └── settings.json   👉 Encourage you to format-on-save ESLint
 ├── cypress
 │   ├── fixtures

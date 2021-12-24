@@ -31,6 +31,8 @@ const baseDeps = [
   "lint-staged",
   "pinst",
   "prettier",
+  "prettier-plugin-twig-melody",
+  "prettier-plugin-twig-enhancements",
   "typescript",
 ];
 
@@ -63,6 +65,11 @@ const stylelintDeps = [
 
 const scripts = {
   "lint:js": "eslint --ext js,jsx,ts,tsx ./ --max-warnings=0",
+  "lint:css": "stylelint 'src/**/*.css'",
+  "lint:html": "prettier --check 'src/**/*.{html,twig}'",
+  "fix:js": "eslint --ext js,jsx,ts,tsx ./ --max-warnings=0 --fix",
+  "fix:css": "stylelint --fix 'src/**/*.css'",
+  "fix:html": "prettier --write 'src/**/*.{html,twig}'",
   "cypress:open": "cypress open",
   "cypress:run": "cypress run",
   "jest:start": "jest --watchAll",
@@ -113,6 +120,7 @@ inquirer
     }
 
     fs.copySync(`${srcd}/.eslintrc`, `${cwd}/.eslintrc`);
+    fs.copySync(`${srcd}/.prettierrc`, `${cwd}/.prettierrc`);
     fs.copySync(`${srcd}/.github`, `${cwd}/.github`);
     fs.copySync(`${srcd}/.husky`, `${cwd}/.husky`);
     fs.copySync(`${srcd}/.lintstagedrc`, `${cwd}/.lintstagedrc`);
