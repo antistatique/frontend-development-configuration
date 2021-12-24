@@ -10,7 +10,7 @@
 
 Currently **provides**:
 - [🔹 ESLint](https://eslint.org/)
-- [🌈 Prettier](https://eslint.org/) ([only for JavaScript](https://github.com/prettier/prettier/issues/5948))
+- [🌈 Prettier](https://eslint.org/) ([except for CSS](https://github.com/prettier/prettier/issues/5948))
 - [👔 Stylelint](https://stylelint.io/)
 - [🟦 TypeScript](https://www.typescriptlang.org/)
 - [📚 Storybook](https://storybook.js.org/)
