@@ -105,8 +105,11 @@ Now that you've get all the good stuff that you need, you have some new NPM scri
 The process above has been to ensure consistent quality of our code, regardless of the project. If you want to **make your life easier** and not always have surprises when you try to commit, **make sure that your IDE is properly configured to handle those linters** to highlight (and even fix) warnings and errors when editing a file. It's just a friendly advice.
 
 Some **ressources**:
-- [ESLint for VSCode](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-- [Stylelint for VSCode](https://marketplace.visualstudio.com/items?itemName=shinnn.stylelint)
+- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+- [Stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
+- [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+- [Headwind](https://marketplace.visualstudio.com/items?itemName=heybourn.headwind)
+- [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
 
 And just in case, ask your colleagues, they surely have great tips for you 😉
 
