@@ -12,7 +12,7 @@ To avoid any trouble, be sure to comply with the following recommendations
 
 - no `{% if %}` in attributes or between `<` and `>`, prefer `set`, `attr`, `?:`, `??`, `attributes.setAttribute()`, etc
 - no `{% for %}` in attributes or between `<` and `>`, prefer `set` and `for`
-=> no `{% %}` in attributes or between `<` and `>` in general, only `{{ }}`
+- => no `{% %}` in attributes or between `<` and `>` in general, only `{{ }}`
 
 - avoid condition wrapped tag opening/closing, f.ex `{% if true %}</div>{% endif %}`
 - avoid special character, f.ex. `1e+6` to `1000000`
