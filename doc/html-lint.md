@@ -16,7 +16,7 @@ To avoid any trouble, be sure to comply with the following recommendations
 
 - avoid condition wrapped tag opening/closing, f.ex `{% if true %}</div>{% endif %}`
 - avoid special character, f.ex. `1e+6` to `1000000`
-- avoid unclosed tags, f.ex. `<js-placeholder token="{{ placeholder_token|raw }}">` to `<js-placeholder token="{{ placeholder_token|raw }}"></js-placeholder>`
+- ignore Drupal `html.html.twig` file because of problematic unclosed `<xyz-placeholder>` tags
 - don't use 
   ```
       _          _   _     _        _   _
