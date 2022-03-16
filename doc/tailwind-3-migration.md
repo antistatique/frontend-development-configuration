@@ -39,7 +39,7 @@
 1. Remove 
   ```tsx
   import { css } from '@emotion/react';
-  import clsx from 'clsx';
+  import tw from 'twin.macro';
   ```
 2. Replace all `tw=` by `className=`.
 3. Refactor `css=` properties logic with `clsx` logic. For example `className={clsx(tw'text-lg', isBig && tw'p-12')}` → `className={clsx('text-lg', isBig && 'p-12')}`
