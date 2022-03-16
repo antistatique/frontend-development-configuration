@@ -32,13 +32,13 @@
       autoprefixer: {},
     },
   }
-  ```
+  ``` 
 
 ## In your Components
 
 1. Remove 
   ```tsx
-  import { css } from '@emotion/react';
+  import { jsx } from '@emotion/react';
   import tw from 'twin.macro';
   ```
 2. Replace all `tw=` by `className=`.
