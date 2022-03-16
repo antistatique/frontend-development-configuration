@@ -39,10 +39,23 @@
 1. Remove 
   ```tsx
   import { css } from '@emotion/react';
-  import tw from 'twin.macro';
+  import clsx from 'clsx';
   ```
 2. Replace all `tw=` by `className=`.
-3. Refactor `css=` properties logic with `clsx` logic. For example `css={[tw'text-lg', isBig && tw'p-12']}` → `className={clsx('text-lg', isBig && 'p-12')}`
+3. Refactor `css=` properties logic with `clsx` logic. For example `className={clsx(tw'text-lg', isBig && tw'p-12')}` → `className={clsx('text-lg', isBig && 'p-12')}`
+
+Here are some usefull RegExes for your search and replace in VSCode:
+- `import tw from 'twin.macro';` → `import clsx from 'clsx';`
+- `\nimport \{ jsx \} from '@emotion/react';` → `\n`
+- `css=\{([^}]*)\}` → `className={clsx($1)}`
+- `css=\{\[([^\}\]]+)\]\}` → `className={clsx($1)}`
+- `css=\{\[\n([^\}\]]+)\]\}` → `className={clsx(\n$1)}`
+- `tw'([^']*)'` (replace `'` with backticks) → `'$1'`
+- `tw'\n([^']*)'` (replace `'` with backticks) → `'\n$1'` (replace `'` with backticks)
+- `tw="([^"]*)"` → `className="$1"`
+- `tw="\n([^"]*)"` → `className="\n$1"`
+
+Also, double check if there is no tags with multiple `className` with `className[^>]*className` or `className[^>]*[\n\t]*className`.
 
 ## With your MyComponent.styles.tsx
 
@@ -50,7 +63,7 @@
 2. Remove
   ```tsx
   import { css } from '@emotion/react';
-  import tw from 'twin.macro';
+  import clsx from 'clsx';
   ```
 3. Choose an entry “class” (f. ex. `.custom {}`) and refactor to “plain” CSS + Tailwind flavors (for example `${tw''}` to `@apply`).
 4. In your component
@@ -59,6 +72,15 @@
 
   <div className={styles.custom}></div>
   ```
+5. Use the `screen()` Tailwind method instead of classic media queries
+
+Here are some usefull RegExes for your search and replace in VSCode (only for `*.styles.*`):
+- `import \{ css \} from '@emotion/react';\n` → nothing
+- `import clsx from 'clsx';\n` → nothing
+- `\$\{'([^']*)'\}` → `@apply $1;`
+- `\$\{'\n([^']*)'\}` (replace `'` with backticks) → `@apply $1;`
+- `export default css'\n([^']*)';` (replace `'` with backticks) → `.default {\n$1}`
+- `export const ([^\s]*) = css'\n([^']*)';` (replace `'` with backticks) → `.$1 {\n$2}`
 
 👉 More information on Component-Level CSS in the [official doc](https://nextjs.org/docs/basic-features/built-in-css-support#adding-component-level-css)
 
