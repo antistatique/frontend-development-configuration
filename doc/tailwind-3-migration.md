@@ -76,7 +76,7 @@ Also, double check if there is no tags with multiple `className` with `className
 
 Here are some usefull RegExes for your search and replace in VSCode (only for `*.styles.*`):
 - `import \{ css \} from '@emotion/react';\n` → nothing
-- `import clsx from 'clsx';\n` → nothing
+- `import tw from 'twin.macro'; \n` → nothing
 - `\$\{'([^']*)'\}` → `@apply $1;`
 - `\$\{'\n([^']*)'\}` (replace `'` with backticks) → `@apply $1;`
 - `export default css'\n([^']*)';` (replace `'` with backticks) → `.default {\n$1}`
