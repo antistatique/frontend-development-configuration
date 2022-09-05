@@ -21,10 +21,7 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "esnext",
-    "types": [
-      "jest",
-      "cypress"
-    ]
+    "types": ["jest", "cypress"]
   },
   "include": [
     "**/*.ts",
@@ -33,6 +30,7 @@
   "exclude": [
     "node_modules",
     "**/*.e2e.*",
-    "**/*.stories.*"
+    "**/*.stories.*",
+    "cypress.config.ts"
   ]
 }
