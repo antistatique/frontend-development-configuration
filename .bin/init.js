@@ -120,7 +120,6 @@ inquirer
     }
 
     fs.copySync(`${srcd}/.eslintrc`, `${cwd}/.eslintrc`);
-    fs.copySync(`${srcd}/.prettierrc`, `${cwd}/.prettierrc`);
     fs.copySync(`${srcd}/.github`, `${cwd}/.github`);
     fs.copySync(`${srcd}/.husky`, `${cwd}/.husky`);
     fs.copySync(`${srcd}/.lintstagedrc`, `${cwd}/.lintstagedrc`);
