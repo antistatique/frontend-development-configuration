@@ -63,6 +63,8 @@
   },
   "dependencies": {
     "fs-extra": "^10.1.0",
-    "inquirer": "^8.0.0"
+    "i18next": "^21.9.1",
+    "inquirer": "^8.0.0",
+    "react-i18next": "^11.18.5"
   }
 }

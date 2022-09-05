@@ -12,5 +12,6 @@ const Template: ComponentStory<typeof Counter> = args => <Counter {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  count: 0,
+  initial: 0,
+  onChange: c => console.log(c),
 };
