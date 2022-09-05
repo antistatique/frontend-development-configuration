@@ -61,7 +61,6 @@ $ npx antistatique-frontend@latest
 │   └── workflows       👉 Github Actions Workflow for Tests
 ├── .husky              👉 Husky (pre-commit) configuration
 ├── .lintstagedrc       👉 lint-staged (for pre-commits) configuration
-├── .prettierrc         👉 Prettier configuration (mainly for HTML/TWIG)
 ├── .storybook 
 │   ├── main.js         👉 Storybook configuration
 │   └── preview.js      👉 Where you load you global CSS
@@ -89,10 +88,8 @@ Now that you've get all the good stuff that you need, you have some new NPM scri
 
 - `yarn lint:js` : Lint your TypeScript files
 - `yarn lint:css` : Lint your CSS/PostCSS files
-- `yarn lint:html` : Lint your HTML/Twig files
 - `yarn fix:js` : Fix JS/TS lint errors
 - `yarn fix:css` : Fix CSS/PostCSS lint errors
-- `yarn fix:html` : Fix HTML/Twig Prettier format
 - `yarn cypress:open` :  Open Cypress (for TDD)
 - `yarn cypress:run` : Run Cypress tests (website + storybook)
 - `yarn jest:start` : Start Jest server
