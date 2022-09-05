@@ -1,20 +1,22 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import Icon from 'components/Icon';
 import { add, subtract } from 'utils';
 
 export type CounterProps = {
-  count: number;
+  initial: number;
+  onChange: (c: number) => void;
 };
 
-const Counter = ({ count: defaultCount }: CounterProps): JSX.Element => {
-  const [count, setCount] = useState(defaultCount);
+const Counter = ({ initial, onChange }: CounterProps): JSX.Element => {
+  const [count, setCount] = useState(initial);
+
+  useEffect(() => {
+    onChange(count);
+  }, [count, onChange]);
 
   return (
-    <div
-      id="counter"
-      className="flex items-center justify-center w-full h-screen"
-    >
+    <div id="counter">
       <button
         type="button"
         onClick={() => setCount(subtract(count, 1))}
@@ -35,10 +37,6 @@ const Counter = ({ count: defaultCount }: CounterProps): JSX.Element => {
       </button>
     </div>
   );
-};
-
-Counter.defaultProps = {
-  count: 0,
 };
 
 export default Counter;

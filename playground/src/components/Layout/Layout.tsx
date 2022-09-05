@@ -7,13 +7,11 @@ type Props = {
 };
 
 const Layout = ({ children }: Props): JSX.Element => (
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   <div>
     <Icons />
     {children}
   </div>
 );
-Layout.defaultProps = {};
 
 // For Storybook
 export const LayoutDecorator = (Story: FunctionComponent): JSX.Element => (
