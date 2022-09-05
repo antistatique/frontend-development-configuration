@@ -110,7 +110,7 @@ inquirer
     if (hasTests) {
       deps = [...deps, ...testsDeps];
       fs.copySync(`${srcd}/jest.config.js`, `${cwd}/jest.config.js`);
-      fs.copySync(`${srcd}/cypress.json`, `${cwd}/cypress.json`);
+      fs.copySync(`${srcd}/cypress.config.ts`, `${cwd}/cypress.config.ts`);
       fs.copySync(`${srcd}/cypress`, `${cwd}/cypress`);
     }
 
