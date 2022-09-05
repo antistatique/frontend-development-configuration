@@ -1,6 +1,6 @@
 {
   "name": "antistatique-frontend",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "Antistatique opinionated frontend development configuration (linters, tests,...)",
   "main": ".bin/init.js",
   "bin": {
