@@ -1,13 +1,10 @@
 import React, { useState } from 'react';
-import { isNil } from 'ramda';
 
 import useAgify from 'hooks/useAgify';
 
 const Fetcher = (): JSX.Element => {
   const [name, setName] = useState<string | null>(null);
-  const { data, isLoading } = useAgify(name);
-
-  console.log(data);
+  const { data, isSuccess } = useAgify(name);
 
   return (
     <div>
@@ -20,7 +17,7 @@ const Fetcher = (): JSX.Element => {
         onChange={e => setName(e.target.value)}
         value={name ?? ''}
       />
-      {!isLoading && !isNil(data) && (
+      {isSuccess && (
         <p className="mt-4">
           {name}, your age is <b>{data.age}</b> 😇
         </p>
