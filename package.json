@@ -64,6 +64,6 @@
   },
   "dependencies": {
     "fs-extra": "^11.1.0",
-    "inquirer": "^9.1.4"
+    "inquirer": "^8.0.0"
   }
 }
