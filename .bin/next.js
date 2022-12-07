@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const fs = require('fs-extra');
-const path = require('path');
+import inquirer from 'inquirer';
 const { exec } = require("child_process");
 
 const srcd = path.join(path.dirname(__filename), '..');
