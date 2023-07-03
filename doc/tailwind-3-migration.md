@@ -22,7 +22,7 @@
     plugins: [...],
   }
   ```
-10. Create a `./postcss.config.js` with
+10. Create a `./postcss.config.cjs` with
   ```js
   module.exports = {
     plugins: {
@@ -87,7 +87,7 @@ Here are some usefull RegExes for your search and replace in VSCode (only for `*
 ## For Storybook
 
 1. Remove `.storybook/.babelrc` and `.storybook/webpack.config.js`
-2. Update your `.storybook/main.js` with something like:
+2. Update your `.storybook/main.ts` with something like:
   ```js
   const path = require('path');
 
@@ -145,7 +145,7 @@ Here are some usefull RegExes for your search and replace in VSCode (only for `*
     },
   }
   ```
-  3. Add `import "../src/styles/globals.css";` in your `.storybook/preview.js`
+  3. Add `import "../src/styles/globals.css";` in your `.storybook/preview.ts`
 
 
 

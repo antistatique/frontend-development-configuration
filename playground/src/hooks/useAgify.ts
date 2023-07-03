@@ -1,7 +1,8 @@
-import { useQuery } from 'react-query';
+import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import { isNil } from 'ramda';
-import agifySchema from 'schemas/agify-schema';
+
+import agifySchema from '@/schemas/agify-schema';
 
 const getAgify = async (name: string | null) => {
   // This axios method could be extract in a service to handle cancel tokens
@@ -14,7 +15,7 @@ const getAgify = async (name: string | null) => {
 };
 
 const useAgify = (name: string | null) =>
-  useQuery(`agify_${name}`, () => getAgify(name), {
+  useQuery([`agify_${name}`], () => getAgify(name), {
     enabled: !isNil(name),
   });
 

@@ -1,19 +1,22 @@
 #!/usr/bin/env node
 
-const fs = require('fs-extra');
-const inquirer = require('inquirer');
-const path = require('path');
-const { exec } = require("child_process");
+import fs from 'fs-extra';
+import inquirer from 'inquirer';
+import path from 'path';
+import { exec } from 'child_process';
 
 const srcd = path.join(path.dirname(__filename), '..');
 const cwd = process.cwd();
 
 const baseDeps = [
-  "@svgr/webpack",
+  "@swc/core",
+  "@swc/jest",
   "@types/jest",
   "@typescript-eslint/eslint-plugin",
   "@typescript-eslint/parser",
   "babel-eslint",
+  "cypress",
+  "dotenv",
   "eslint",
   "eslint-config-airbnb",
   "eslint-config-airbnb-typescript",
@@ -28,26 +31,26 @@ const baseDeps = [
   "eslint-plugin-simple-import-sort",
   "eslint-plugin-tailwind",
   "husky",
+  "jest",
   "lint-staged",
   "pinst",
   "prettier",
-  "prettier-plugin-twig-melody",
-  "prettier-plugin-twig-enhancements",
+  "stylelint",
+  "stylelint-config-standard",
+  "stylelint-order",
   "typescript",
 ];
 
 const storybookDeps = [
-  "@babel/core",
   "@storybook/addon-actions",
   "@storybook/addon-docs",
   "@storybook/addon-essentials",
   "@storybook/addon-links",
-  "@storybook/addon-postcss",
-  "@storybook/builder-webpack5",
-  "@storybook/manager-webpack5",
+  "@storybook/builder-vite",
+  "@storybook/nextjs",
   "@storybook/react",
-  "storybook-addon-next-router",
-  "storybook-css-modules-preset",
+  "@storybook/react-vite",
+  "storybook",
 ];
 
 const testsDeps = [
@@ -66,16 +69,14 @@ const stylelintDeps = [
 const scripts = {
   "lint:js": "eslint --ext js,jsx,ts,tsx ./ --max-warnings=0",
   "lint:css": "stylelint 'src/**/*.css'",
-  "lint:html": "prettier --check 'src/**/*.{html,twig}'",
   "fix:js": "eslint --ext js,jsx,ts,tsx ./ --max-warnings=0 --fix",
   "fix:css": "stylelint --fix 'src/**/*.css'",
-  "fix:html": "prettier --write 'src/**/*.{html,twig}'",
   "cypress:open": "cypress open",
   "cypress:run": "cypress run",
-  "jest:start": "jest --watchAll",
-  "jest:run": "jest",
-  "storybook:start": "NODE_PATH=src start-storybook -s public -p 6006",
-  "storybook:build": "NODE_PATH=src build-storybook",
+  "jest:start": "node --experimental-vm-modules node_modules/jest/bin/jest.js --watchAll",
+  "jest:run": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+  "storybook:start": "storybook dev --no-open -p 6006",
+  "storybook:build": "storybook build",
   "postinstall": "husky install",
   "prepublishOnly": "pinst --disable",
   "postpublish": "pinst --enable"
@@ -123,7 +124,6 @@ inquirer
     fs.copySync(`${srcd}/.github`, `${cwd}/.github`);
     fs.copySync(`${srcd}/.husky`, `${cwd}/.husky`);
     fs.copySync(`${srcd}/.lintstagedrc`, `${cwd}/.lintstagedrc`);
-    fs.copySync(`${srcd}/.vscode`, `${cwd}/.vscode`);
     fs.copySync(`${srcd}/tsconfig.json`, `${cwd}/tsconfig.json`);
     fs.copySync(`${srcd}/tsconfig.test.json`, `${cwd}/tsconfig.test.json`);
     fs.copySync(`${srcd}/playground/tsconfig.eslint.json`, `${cwd}/tsconfig.eslint.json`);
@@ -156,4 +156,3 @@ inquirer
   .catch(error => {
     console.error(error);
   });
-  

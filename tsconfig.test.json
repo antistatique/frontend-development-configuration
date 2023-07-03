@@ -29,7 +29,6 @@
   ],
   "exclude": [
     "node_modules",
-    "**/*.e2e.*",
     "**/*.stories.*",
     "cypress.config.ts"
   ]

@@ -1,11 +1,11 @@
-import React from 'react';
 import { LayoutDecorator } from '../src/components/Layout/Layout';
-import { IconsDecorator } from '../src/components/Icons/Icons';
 
 import "../src/styles/globals.css";
 
 export const parameters = {
-  actions: { argTypesRegex: '^on[A-Z].*' },
+  parameters: {
+    actions: { argTypesRegex: '^on.*' },
+  },
   controls: {
     expanded: true,
     matchers: {
@@ -13,10 +13,8 @@ export const parameters = {
       date: /Date$/,
     },
   },
-  viewMode: 'docs',
 }
 
 export const decorators = [
   LayoutDecorator,
-  IconsDecorator,
 ]

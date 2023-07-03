@@ -1,9 +1,9 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import Counter from 'components/Counter';
-import Fetcher from 'components/Fetcher';
-import Layout from 'components/Layout';
+import Counter from '@/components/Counter';
+import Fetcher from '@/components/Fetcher';
+import Layout from '@/components/Layout';
 
 const Home = (): JSX.Element => {
   const { t } = useTranslation();

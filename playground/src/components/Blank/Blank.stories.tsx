@@ -1,16 +1,28 @@
-import React from 'react';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 
 import Blank from './Blank';
 
-export default {
+const meta = {
   title: 'Demo/Blank',
   component: Blank,
-} as ComponentMeta<typeof Blank>;
+  parameters: {},
+} satisfies Meta<typeof Blank>;
 
-const Template: ComponentStory<typeof Blank> = args => <Blank {...args} />;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const Default = Template.bind({});
-Default.args = {
-  name: 'John',
+/*
+ * STORIES
+ */
+
+export const Default: Story = {
+  args: {
+    name: 'John',
+  },
+  parameters: {
+    docs: {
+      story: { inline: true },
+      canvas: { sourceState: 'shown' },
+    },
+  },
 };

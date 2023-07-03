@@ -1,20 +1,12 @@
-module.exports = {
+export default {
   moduleDirectories: ['./node_modules', 'src'],
-  preset: 'ts-jest',
   testEnvironment: 'node',
-  testMatch: [
-    '**/__tests__/**/*.+(ts|tsx|js|jsx)',
-    '**/?(*.)+(spec|test).+(ts|tsx|js|jsx)',
-  ],
+  testMatch: ['**/__tests__/**/*.(spec|test).+(ts|tsx|js|jsx)', '**/?(*.)+(spec|test).+(ts|tsx|js|jsx)'],
   transform: {
-    '^.+\\.(ts|tsx)$': 'ts-jest',
+    '^.+\\.(t|j)sx?$': '@swc/jest',
   },
   setupFiles: [
     'dotenv/config'
   ],
-  globals: {
-    'ts-jest': {
-      tsconfig: './tsconfig.test.json',
-    },
-  },
+  extensionsToTreatAsEsm: ['.ts','.tsx'],
 };

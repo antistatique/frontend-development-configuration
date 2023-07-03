@@ -1,16 +1,29 @@
-import React from 'react';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 
 import Fetcher from './Fetcher';
 
-export default {
+const meta = {
   title: 'Demo/Fetcher',
   component: Fetcher,
-} as ComponentMeta<typeof Fetcher>;
+  argTypes: { onChange: { action: 'changed' } },
+  parameters: {},
+} satisfies Meta<typeof Fetcher>;
 
-const Template: ComponentStory<typeof Fetcher> = args => <Fetcher {...args} />;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const Default = Template.bind({});
-Default.args = {
-  name: 'John',
+/*
+ * STORIES
+ */
+
+export const Default: Story = {
+  args: {
+    name: 'John',
+  },
+  parameters: {
+    docs: {
+      story: { inline: true },
+      canvas: { sourceState: 'shown' },
+    },
+  },
 };

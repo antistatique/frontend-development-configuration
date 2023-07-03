@@ -62,8 +62,8 @@ $ npx antistatique-frontend@latest
 ├── .husky              👉 Husky (pre-commit) configuration
 ├── .lintstagedrc       👉 lint-staged (for pre-commits) configuration
 ├── .storybook 
-│   ├── main.js         👉 Storybook configuration
-│   └── preview.js      👉 Where you load you global CSS
+│   ├── main.ts         👉 Storybook configuration
+│   └── preview.ts      👉 Where you load you global CSS
 ├── .stylelintrc        👉 Stylelint configuration
 ├── .vscode
 │   ├── extensions.json 👉 Recommended plugins to install

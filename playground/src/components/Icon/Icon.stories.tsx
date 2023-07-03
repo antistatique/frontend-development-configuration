@@ -1,24 +1,34 @@
-import React from 'react';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 
-import { iconList } from '../Icons/Icons';
+import Icon, { icons } from './Icon';
 
-import Icon from './Icon';
-
-export default {
+const meta = {
   title: 'Components/Icon',
   component: Icon,
   argTypes: {
     name: {
       control: 'select',
-      options: Object.keys(iconList),
+      options: icons,
     },
   },
-} as ComponentMeta<typeof Icon>;
+  parameters: {},
+} satisfies Meta<typeof Icon>;
 
-const Template: ComponentStory<typeof Icon> = args => <Icon {...args} />;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const Default = Template.bind({});
-Default.args = {
-  name: 'home',
+/*
+ * STORIES
+ */
+
+export const Default: Story = {
+  args: {
+    name: 'home',
+  },
+  parameters: {
+    docs: {
+      story: { inline: true },
+      canvas: { sourceState: 'shown' },
+    },
+  },
 };

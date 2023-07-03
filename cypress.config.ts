@@ -1,13 +1,14 @@
 import { defineConfig } from 'cypress';
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import * as dotenv from 'dotenv';
+
+dotenv.config();
 
 export default defineConfig({
   e2e: {
-    // We've imported your old cypress plugins here.
-    // You may want to clean this up later by importing these.
-    setupNodeEvents(on, config) {
-      return require('./cypress/plugins/index.js')(on, config);
-    },
     baseUrl: 'http://localhost:3000',
     specPattern: './**/*.e2e.{ts,js}',
   },
+  env: process.env,
 });

@@ -15,10 +15,12 @@
 # production
 /build
 src/styles/base.css
+/public/icons.svg
 
 # misc
 .DS_Store
 *.pem
+*tsconfig.tsbuildinfo
 
 # debug
 npm-debug.log*

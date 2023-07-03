@@ -1,17 +1,29 @@
-import React from 'react';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 
 import Counter from './Counter';
 
-export default {
+const meta = {
   title: 'Components/Counter',
   component: Counter,
-} as ComponentMeta<typeof Counter>;
+  argTypes: { onChange: { action: 'changed' } },
+  parameters: {},
+} satisfies Meta<typeof Counter>;
 
-const Template: ComponentStory<typeof Counter> = args => <Counter {...args} />;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const Default = Template.bind({});
-Default.args = {
-  initial: 0,
-  onChange: c => console.log(c),
+/*
+ * STORIES
+ */
+
+export const Default: Story = {
+  args: {
+    initial: 0,
+  },
+  parameters: {
+    docs: {
+      story: { inline: true },
+      canvas: { sourceState: 'shown' },
+    },
+  },
 };

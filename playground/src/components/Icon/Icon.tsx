@@ -1,9 +1,11 @@
 import React from 'react';
 import clsx from 'clsx';
 
-import { IconNames } from 'components/Icons/Icons';
-
 import styles from './Icon.module.css';
+
+export type IconNames = 'home';
+
+export const icons: IconNames[] = ['home'];
 
 export type Props = {
   name?: IconNames;
@@ -11,8 +13,8 @@ export type Props = {
 };
 
 const Icon = ({ name = 'home', className }: Props): JSX.Element => (
-  <svg className={clsx(styles.icon, className)} aria-hidden="true">
-    <use xlinkHref={`#${name}`} />
+  <svg className={clsx(styles.default, className)} aria-hidden="true">
+    <use xlinkHref={`/icons.svg#${name}`} />
   </svg>
 );
 

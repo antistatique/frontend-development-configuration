@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
-import Icon from 'components/Icon';
-import { add, subtract } from 'utils';
+import Icon from '@/components/Icon';
+import { add, subtract } from '@/utils';
 
 export type CounterProps = {
   initial: number;

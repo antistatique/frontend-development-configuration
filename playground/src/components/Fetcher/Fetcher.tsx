@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import useAgify from 'hooks/useAgify';
+import useAgify from '@/hooks/useAgify';
 
 const Fetcher = (): JSX.Element => {
   const [name, setName] = useState<string | null>(null);
