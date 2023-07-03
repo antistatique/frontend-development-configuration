@@ -4,7 +4,9 @@ import fs from 'fs-extra';
 import inquirer from 'inquirer';
 import path from 'path';
 import { exec } from 'child_process';
+import { fileURLToPath } from 'url';
 
+const __filename = fileURLToPath(import.meta.url);
 const srcd = path.join(path.dirname(__filename), '..');
 const cwd = process.cwd();
 
@@ -141,13 +143,13 @@ inquirer
     });
 
     const eslintConfig = fs.readJsonSync(`${cwd}/.eslintrc`);
-    fs.writeJsonSync(`${cwd}/.eslintrc`, {
+    fs.writeJsonSync(`${cwd}/.eslintrc`, JSON.stringify({
       ...eslintConfig,
       parserOptions: {
         ...eslintConfig.parserOptions,
         project: './tsconfig.eslint.json',
       }
-    });
+    }, null, 2));
 
     exec(`yarn add --dev ${deps.join(' ')}`, () => {
       console.log('✅ Achieved with success!');
