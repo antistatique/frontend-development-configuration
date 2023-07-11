@@ -6,7 +6,7 @@ type Props = {
   name: string;
 };
 
-const Blank = ({ name }: Props): JSX.Element => {
+const Blank: React.FC<Props> = ({ name }) => {
   const greeting = 'Hello';
 
   return (

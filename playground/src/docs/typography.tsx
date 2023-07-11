@@ -19,7 +19,7 @@ export const Headings = (): JSX.Element => (
   </div>
 );
 
-export const Paragraphs = (): JSX.Element => (
+export const Paragraphs: React.FC = () => (
   <div className="font-sans antialiased text-gray-900">
     <code className="inline-block mt-6 text-sm">text-xl font-sans</code>
     <p className="text-xl">Font Sans · Regular · X/X</p>

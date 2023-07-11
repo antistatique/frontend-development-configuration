@@ -12,7 +12,7 @@ export type Props = {
   className?: string;
 };
 
-const Icon = ({ name = 'home', className }: Props): JSX.Element => (
+const Icon: React.FC<Props> = ({ name = 'home', className }) => (
   <svg className={clsx(styles.default, className)} aria-hidden="true">
     <use xlinkHref={`/icons.svg#${name}`} />
   </svg>

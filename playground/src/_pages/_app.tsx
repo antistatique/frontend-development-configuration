@@ -2,13 +2,13 @@ import React from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import type { AppProps } from 'next/app';
 
-import '@/locales';
+import '@/locales/client';
 
 import '@/styles/globals.css';
 
 const queryClient = new QueryClient();
 
-const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => (
+const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => (
   <QueryClientProvider client={queryClient}>
     <Component {...pageProps} />
   </QueryClientProvider>

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import useAgify from '@/hooks/useAgify';
 
-const Fetcher = (): JSX.Element => {
+const Fetcher: React.FC = () => {
   const [name, setName] = useState<string | null>(null);
   const { data, isSuccess } = useAgify(name);
 

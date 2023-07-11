@@ -8,7 +8,7 @@ export type CounterProps = {
   onChange: (c: number) => void;
 };
 
-const Counter = ({ initial, onChange }: CounterProps): JSX.Element => {
+const Counter: React.FC<CounterProps> = ({ initial, onChange }) => {
   const [count, setCount] = useState(initial);
 
   useEffect(() => {

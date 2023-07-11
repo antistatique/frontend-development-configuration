@@ -7,10 +7,10 @@ type Props = {
   children: React.ReactNode;
 };
 
-const Layout = ({ children }: Props): JSX.Element => <div>{children}</div>;
+const Layout: React.FC<Props> = ({ children }) => <div>{children}</div>;
 
 // For Storybook
-export const LayoutDecorator = (Story: FunctionComponent): JSX.Element => (
+export const LayoutDecorator: React.FC<FunctionComponent> = Story => (
   <div className="font-sans antialiased text-gray-900">
     <QueryClientProvider client={queryClient}>
       <Story />

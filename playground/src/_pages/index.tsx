@@ -5,7 +5,7 @@ import Counter from '@/components/Counter';
 import Fetcher from '@/components/Fetcher';
 import Layout from '@/components/Layout';
 
-const Home = (): JSX.Element => {
+const Home: React.FC = () => {
   const { t } = useTranslation();
 
   return (
