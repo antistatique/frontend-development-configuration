@@ -41,7 +41,7 @@ Currently **provides**:
 First, **create your project** using the dedicated scaffolding tool for your project's technologies. Here are some usefull commands that you can use :
 
 ```bash
-$ npx -p antistatique-frontend@latest next # Cool, right?
+$ npx -p antistatique-frontend@latest next # Cool, right? Then choose to keep src/_app (as src/app) or src/_pages (as src/pages) depending on your router of choice
 $ npx create-react-app my-app --template typescript
 $ npx create-next-app --example with-typescript-types my-app
 ```
