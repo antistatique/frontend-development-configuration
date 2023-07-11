@@ -212,9 +212,6 @@
           "./src"
         ]
       },
-      "react": {
-        "version": "detect"
-      },
       "typescript": {
         "alwaysTryTypes": true,
         "project": "./"
