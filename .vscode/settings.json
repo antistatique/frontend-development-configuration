@@ -25,7 +25,7 @@
   },
   "headwind.runOnSave": true,
   "stylelint.enable": true,
-  "stylelint.packageManager": "yarn",
+  "stylelint.packageManager": "bun",
   "stylelint.validate": [
     "css",
     "scss",

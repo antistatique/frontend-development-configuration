@@ -16,6 +16,6 @@ fs.copySync(`${srcd}/playground`, `${cwd}`);
 fs.removeSync(`${cwd}/tsconfig.json`);
 fs.copySync(`${srcd}/tsconfig.json`, `${cwd}/tsconfig.json`);
 fs.removeSync(`${cwd}/.storybook`);
-exec('yarn', () => {
+exec('bun install -y', () => {
   spinner.succeed();
 });

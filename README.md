@@ -35,8 +35,7 @@ Currently **provides**:
 **Requirement**:
 
 - [📗 NodeJS 10+](https://nodejs.org/en/)
-- [🐈 Yarn](https://yarnpkg.com/lang/en/)
-- [📦 npx](https://github.com/npm/npx)
+- [🥟 Bun >= 1.0.13](https://bun.sh/) - Dependency manager
 
 First, **create your project** using the dedicated scaffolding tool for your project's technologies. Here are some usefull commands that you can use :
 
@@ -86,16 +85,16 @@ $ npx antistatique-frontend@latest
 
 Now that you've get all the good stuff that you need, you have some new NPM scripts at your disposal:
 
-- `yarn lint:js` : Lint your TypeScript files
-- `yarn lint:css` : Lint your CSS/PostCSS files
-- `yarn fix:js` : Fix JS/TS lint errors
-- `yarn fix:css` : Fix CSS/PostCSS lint errors
-- `yarn cypress:open` :  Open Cypress (for TDD)
-- `yarn cypress:run` : Run Cypress tests (website + storybook)
-- `yarn jest:start` : Start Jest server
-- `yarn jest:run` : Run Jest tests
-- `yarn storybook:start` : Start Storybook server
-- `yarn storybook:build` : Build static Storybook
+- `npm run lint:js` : Lint your TypeScript files
+- `npm run lint:css` : Lint your CSS/PostCSS files
+- `npm run fix:js` : Fix JS/TS lint errors
+- `npm run fix:css` : Fix CSS/PostCSS lint errors
+- `npm run cypress:open` :  Open Cypress (for TDD)
+- `npm run cypress:run` : Run Cypress tests (website + storybook)
+- `npm run jest:start` : Start Jest server
+- `npm run jest:run` : Run Jest tests
+- `npm run storybook:start` : Start Storybook server
+- `npm run storybook:build` : Build static Storybook
 
 ## IDE
 

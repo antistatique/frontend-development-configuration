@@ -6,8 +6,8 @@
   "scripts": {
     "clean": "rm -rf .next && rm -rf node_modules/.cache",
     "icons:build": "svg-sprite -s --symbol-inline --symbol-dest public --symbol-sprite icons.svg src/assets/icons/*.svg",
-    "dev": "yarn run clean && next",
-    "build": "yarn run icons:build && next build",
+    "dev": "npm run clean && next",
+    "build": "npm run icons:build && next build",
     "start": "next start",
     "type-check": "tsc",
     "storybook:start": "storybook dev --no-open -p 6006",
