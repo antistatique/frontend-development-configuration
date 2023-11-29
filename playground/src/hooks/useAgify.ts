@@ -15,7 +15,9 @@ const getAgify = async (name: string | null) => {
 };
 
 const useAgify = (name: string | null) =>
-  useQuery([`agify_${name}`], () => getAgify(name), {
+  useQuery({
+    queryKey: [`agify_${name}`],
+    queryFn: () => getAgify(name),
     enabled: !isNil(name),
   });
 
