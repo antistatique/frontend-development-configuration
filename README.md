@@ -85,16 +85,16 @@ $ bun x antistatique-frontend@latest
 
 Now that you've get all the good stuff that you need, you have some new NPM scripts at your disposal:
 
-- `npm run lint:js` : Lint your TypeScript files
-- `npm run lint:css` : Lint your CSS/PostCSS files
-- `npm run fix:js` : Fix JS/TS lint errors
-- `npm run fix:css` : Fix CSS/PostCSS lint errors
-- `npm run cypress:open` :  Open Cypress (for TDD)
-- `npm run cypress:run` : Run Cypress tests (website + storybook)
-- `npm run jest:start` : Start Jest server
-- `npm run jest:run` : Run Jest tests
-- `npm run storybook:start` : Start Storybook server
-- `npm run storybook:build` : Build static Storybook
+- `bun run lint:js` : Lint your TypeScript files
+- `bun run lint:css` : Lint your CSS/PostCSS files
+- `bun run fix:js` : Fix JS/TS lint errors
+- `bun run fix:css` : Fix CSS/PostCSS lint errors
+- `bun run cypress:open` :  Open Cypress (for TDD)
+- `bun run cypress:run` : Run Cypress tests (website + storybook)
+- `bun run jest:start` : Start Jest server
+- `bun run jest:run` : Run Jest tests
+- `bun run storybook:start` : Start Storybook server
+- `bun run storybook:build` : Build static Storybook
 
 ## IDE
 
