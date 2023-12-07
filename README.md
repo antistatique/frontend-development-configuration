@@ -2,7 +2,7 @@
 
 > Antistatique truth source and **opinionated** configuration.
 
-*If you're just to lazy to read the README  😏👉 `npx antistatique-frontend@latest`*
+*If you're just to lazy to read the README  😏👉 `bun x antistatique-frontend@latest`*
 
 **Others resources**
 - [📗 Tests Handbook](doc/tests-handbook.md)
@@ -35,21 +35,20 @@ Currently **provides**:
 **Requirement**:
 
 - [📗 NodeJS 10+](https://nodejs.org/en/)
-- [🐈 Yarn](https://yarnpkg.com/lang/en/)
-- [📦 npx](https://github.com/npm/npx)
+- [🥟 Bun >= 1.0.13](https://bun.sh/) - Dependency manager
 
 First, **create your project** using the dedicated scaffolding tool for your project's technologies. Here are some usefull commands that you can use :
 
 ```bash
-$ npx -p antistatique-frontend@latest next # Cool, right? Then choose to keep src/_app (as src/app) or src/_pages (as src/pages) depending on your router of choice
-$ npx create-react-app my-app --template typescript
-$ npx create-next-app --example with-typescript-types my-app
+$ bun x -p antistatique-frontend@latest next # Cool, right? Then choose to keep src/_app (as src/app) or src/_pages (as src/pages) depending on your router of choice
+$ bun x create-react-app my-app --template typescript
+$ bun x create-next-app --example with-typescript-types my-app
 ```
 
 Then, to **get this amazing environment**, simply execute the following command and answer the questions:
 
 ```bash
-$ npx antistatique-frontend@latest
+$ bun x antistatique-frontend@latest
 ```
 
 ## What's inside?
@@ -86,16 +85,16 @@ $ npx antistatique-frontend@latest
 
 Now that you've get all the good stuff that you need, you have some new NPM scripts at your disposal:
 
-- `yarn lint:js` : Lint your TypeScript files
-- `yarn lint:css` : Lint your CSS/PostCSS files
-- `yarn fix:js` : Fix JS/TS lint errors
-- `yarn fix:css` : Fix CSS/PostCSS lint errors
-- `yarn cypress:open` :  Open Cypress (for TDD)
-- `yarn cypress:run` : Run Cypress tests (website + storybook)
-- `yarn jest:start` : Start Jest server
-- `yarn jest:run` : Run Jest tests
-- `yarn storybook:start` : Start Storybook server
-- `yarn storybook:build` : Build static Storybook
+- `bun run lint:js` : Lint your TypeScript files
+- `bun run lint:css` : Lint your CSS/PostCSS files
+- `bun run fix:js` : Fix JS/TS lint errors
+- `bun run fix:css` : Fix CSS/PostCSS lint errors
+- `bun run cypress:open` :  Open Cypress (for TDD)
+- `bun run cypress:run` : Run Cypress tests (website + storybook)
+- `bun run jest:start` : Start Jest server
+- `bun run jest:run` : Run Jest tests
+- `bun run storybook:start` : Start Storybook server
+- `bun run storybook:build` : Build static Storybook
 
 ## IDE
 

@@ -7,22 +7,21 @@ This project is a **template** and a real **playground** project at the **same t
 **Requirement**:
 
 - [📗 NodeJS 10+](https://nodejs.org/en/)
-- [🐈 Yarn](https://yarnpkg.com/lang/en/)
-- [📦 npx](https://github.com/npm/npx)
+- [🥟 Bun >= 1.0.13](https://bun.sh/) - Dependency manager
 
 First you'll have to install the root and playground dependencies :
 
 ```bash
-$ yarn
-$ cd playground && yarn
+$ bun install -y
+$ cd playground && bun install -y
 ```
 
 ## Run things
 
-- `cd playground && yarn dev` for the playground project
-- `yarn storybook:start` for Storybook
-- `yarn cypress:open` for Cypress
-- `yarn jest:start` for Jest
+- `cd playground && bun run dev` for the playground project
+- `bun run storybook:start` for Storybook
+- `bun run cypress:open` for Cypress
+- `bun run jest:start` for Jest
 
 ## Test the Github Actions
 

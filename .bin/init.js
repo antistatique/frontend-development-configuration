@@ -179,7 +179,7 @@ inquirer
     }
     fs.writeJsonSync(`${cwd}/.lintstagedrc`, lintstagedConfig, { spaces: 2 });
 
-    exec(`yarn add --dev ${deps.join(' ')}`, () => {
+    exec(`bun add --dev ${deps.join(' ')}`, () => {
       spinner.succeed();
     });
   })

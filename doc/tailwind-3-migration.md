@@ -4,8 +4,8 @@
 
 1. Remove `./patches` directory and `patch-package` dependency + update `postinstall` NPM script.
 2. Remove `.babelrc`, `.babel-plugin-macros.config.js`.
-3. `$ yarn remove @emotion/babel-preset-css-prop @emotion/css @emotion/react  @emotion/server @emotion/styled @emotion/babel-plugin babel-plugin-macros twin.macro`
-4. `$ yarn add autoprefixer postcss-import`
+3. `$ bun run remove @emotion/babel-preset-css-prop @emotion/css @emotion/react  @emotion/server @emotion/styled @emotion/babel-plugin babel-plugin-macros twin.macro`
+4. `$ bun run add autoprefixer postcss-import`
 5. Upgrade `tailwindcss` to >3
 6. Remove `<GlobalStyles>` from `pages/_app.{jsx, tsx}`
 7. Clean (or remove) `pages/_document.{jsx, tsx}`

@@ -59,4 +59,4 @@ To create a new E2E test (always with the `.e2e` suffix):
 └── Button.e2e.ts         👉 Cypress test using visitStorybook()
 ```
 
-⚠️ **Pro tips**: If you want to ease your life, copy the [Blank component](https://github.com/antistatique/frontend-development-configuration/tree/master/playground/src/components/Blank) in your project and use `$ npx generact` to create new components.
+⚠️ **Pro tips**: If you want to ease your life, copy the [Blank component](https://github.com/antistatique/frontend-development-configuration/tree/master/playground/src/components/Blank) in your project and use `$ bun x generact` to create new components.

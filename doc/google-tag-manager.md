@@ -8,7 +8,7 @@ This is a simple, step by step, **tutorial to install and use Google Tag Manager
 Install [react-gtm-module](https://github.com/alinemorelli/react-gtm) on your project.
 
 ```bash
-$ yarn install react-gtm-module
+$ bun add react-gtm-module
 ```
 
 ## 2. Create the service

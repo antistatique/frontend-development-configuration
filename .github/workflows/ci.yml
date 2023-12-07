@@ -8,29 +8,28 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v1
-      - name: Setup Node 14.x
-        uses: actions/setup-node@v1
+      - uses: oven-sh/setup-bun@v1
         with:
-          node-version: '14.x'
+          bun-version: latest
       - name: Build root
-        run: yarn install
+        run: bun install -y
       - name: Build project
-        run: yarn install && yarn build
+        run: bun install -y && bun run build
         working-directory: playground
       - name: Unit tests
-        run: yarn jest:run
+        run: bun run jest:run
       - name: Cypress App tests
         uses: cypress-io/github-action@v2
         with:
-          start: yarn start
+          start: bun run start
           wait-on: http://localhost:3000
           browser: chrome
           config: baseUrl=http://localhost:3000,integrationFolder=cypress/integration,testFiles=**/*.*
       - name: Cypress Storybook tests
         uses: cypress-io/github-action@v2
         with:
-          start: yarn storybook:start
+          start: bun run storybook:start
           wait-on: http://localhost:6006
           browser: chrome
           config: baseUrl=http://localhost:6006,integrationFolder=playground,testFiles=**/*.e2e.*
-      
+

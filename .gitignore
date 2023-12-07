@@ -4,3 +4,4 @@ cypress/screenshots/*
 storybook-static
 *.DS_Store
 .idea
+*/bun.lockb

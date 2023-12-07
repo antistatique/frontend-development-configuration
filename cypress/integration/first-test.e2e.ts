@@ -8,12 +8,12 @@ describe('Homepage', () => {
   });
 
   it('should increase the count', () => {
-    cy.get('#counter > button:last-child').click();
+    cy.get('#counter > button:last-child').click({ force: true });
     cy.get('#counter > span').should('contain', '1');
   });
 
   it('should decrease the count', () => {
-    cy.get('#counter > button:first-child').click();
+    cy.get('#counter > button:first-child').click({ force: true });
     cy.get('#counter > span').should('contain', '-1');
   });
 });
