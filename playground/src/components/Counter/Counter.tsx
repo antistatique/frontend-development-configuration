@@ -26,7 +26,7 @@ const Counter: React.FC<CounterProps> = ({ initial, onChange }) => {
       </button>
       <span className="px-4 text-2xl font-bold">
         <Icon className="text-xl" />
-        {count}
+        <span id="count">{count}</span>
       </span>
       <button
         type="button"

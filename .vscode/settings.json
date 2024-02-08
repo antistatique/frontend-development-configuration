@@ -8,9 +8,9 @@
     "editor.formatOnSave": true
   },
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true,
-    "source.fixAll.stylelint": true,
-    "source.fixAll.tslint": true
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll.stylelint": "explicit",
+    "source.fixAll.tslint": "explicit"
   },
   "editor.formatOnSave": false,
   "eslint.enable": true,
@@ -31,4 +31,5 @@
     "scss",
     "postcss"
   ]
+  "eslint.workingDirectories": [".", "playground"]
 }
